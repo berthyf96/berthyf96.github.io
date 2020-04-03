@@ -9,11 +9,11 @@
 locale                   : "en-US"
 title                    : "Berthy Feng"
 title_separator          : "-"
-name                     : &name "berthyf96"
-description              : &description "Personal Website"
+name                     : &name "Berthy Feng"
+description              : &description "PhD Student @ Caltech CMS"
 url                      : https://berthyfeng.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "https://github.com/berthyf96/berthyf96.github.io"
+repository               : "berthyf96.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
