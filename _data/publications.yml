@@ -1,0 +1,9 @@
+# Publications on home page
+year2019:
+  - title: "Learning Bandwidth Expansion Using Perceptually-Motivated Loss"
+    authors: "**Berthy Feng**, Zeyu Jin, Jiaqi Su, Adam Finkelstein"
+    venue: "In *ICASSP*, 2020."
+    teaser: bwe.png
+    links:
+      - "[PDF](https://pixl.cs.princeton.edu/pubs/Feng_2019_LBE/Feng_2019_bwe.pdf){: .btn .btn--info}"
+      - "[Code](https://github.com/berthyf96/bwe_fftnet){: .btn .btn--inverse}"
