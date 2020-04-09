@@ -1,5 +1,5 @@
 ---
-title: 'Literary Chords in James Joyce's Ulysses'
+title: "Literary Chords in James Joyce's Ulysses"
 date: 2018-01-16
 permalink: /posts/2018/01/ulysses-literary-chords/
 tags:
