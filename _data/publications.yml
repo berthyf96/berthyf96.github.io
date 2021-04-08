@@ -1,4 +1,21 @@
-# Publications on home page
+year2021:
+  - title: "Visual Vibration Tomography: Estimating Interior Material Properties from Monocular Video"
+    authors: "**Berthy Feng**, Alexander C. Ogren, Chiara Daraio, Katherine L. Bouman"
+    venue: "arXiv preprint, 2021."
+    teaser: vvt_pipeline.png
+    links:
+      - "[arXiv](https://arxiv.org/abs/2104.02735){: .btn .btn--info}"
+
+
+year2020:
+  - title: "Towards Unique and Informative Captioning of Images"
+    authors: "Zeyu Wang, **Berthy Feng**, Karthik Narasimhan, Olga Russakovsky"
+    venue: "In *ECCV*, 2020."
+    teaser: eccv_captioning.png
+    links:
+      - "[PDF](http://www.ecva.net/papers/eccv_2020/papers_ECCV/html/350_ECCV_2020_paper.php){: .btn .btn--info}"
+      - "[Code](https://github.com/princetonvisualai/SPICE-U){: .btn .btn--inverse}"
+    
 year2019:
   - title: "Learning Bandwidth Expansion Using Perceptually-Motivated Loss"
     authors: "**Berthy Feng**, Zeyu Jin, Jiaqi Su, Adam Finkelstein"

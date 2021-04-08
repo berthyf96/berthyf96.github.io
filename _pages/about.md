@@ -8,4 +8,4 @@ redirect_from:
   - /about.html
 ---
 
-Hey there! I'm a first-year PhD student at Caltech in [Computing & Mathematical Sciences](http://www.cms.caltech.edu/). Previously, I studied computer science at Princeton University. I'm interested in computer vision, machine learning, and audio synthesis. This website is meant to host random tidbits as I document my journey through graduate school.
+Hey there! I'm a second-year PhD student at Caltech working with [Prof. Katie Bouman](http://users.cms.caltech.edu/~klbouman/) in the [Computing & Mathematical Sciences](http://www.cms.caltech.edu/) Department. Previously, I studied computer science at Princeton University. I'm interested in computer vision and physics-based machine learning.
