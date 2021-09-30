@@ -7,8 +7,10 @@ author_profile: true
 
 <h2 id="about">About</h2>
 <div><p>
-    Hey there! I'm a second-year PhD student at Caltech working with <a href="http://users.cms.caltech.edu/~klbouman/" target="_blank">Prof. Katie Bouman</a>
-    in the <a href="http://www.cms.caltech.edu/" target="_blank">Computing & Mathematical Sciences</a> Department. Previously, I studied computer science at Princeton University. I'm interested in computer vision and physics-based machine learning.
+    Hello! I'm a third-year PhD student at Caltech working with <a href="http://users.cms.caltech.edu/~klbouman/" target="_blank">Prof. Katie Bouman</a>
+    in the <a href="http://www.cms.caltech.edu/" target="_blank">Computing & Mathematical Sciences</a> Department.
+    Previously, I graduated from Princeton University <em>summa cum laude</em>, with a major in Computer Science and minor in Statistics & Machine Learning. 
+    I study the extra-perceptual insights provided by commonplace data (audio, images, video). These insights may be scientific (e.g., inferring unseen material properties) or artistic (e.g., super-resolving audio to be perceptually pleasing).   
 </p></div>
 
 
@@ -27,18 +29,7 @@ author_profile: true
 </div> -->
 
 <h2 style="clear: both;" id="publications">Publications</h2>
-<h3>2021</h3>
-{% for publication in site.data.publications.year2021 %}
-  {% include publication-single.html %}
-{% endfor %}
-<div style="clear: both;"></div>
-<h3>2020</h3>
-{% for publication in site.data.publications.year2020 %}
-  {% include publication-single.html %}
-{% endfor %}
-<div style="clear: both;"></div>
-<h3>2019</h3>
-{% for publication in site.data.publications.year2019 %}
+{% for publication in site.data.publications.all %}
   {% include publication-single.html %}
 {% endfor %}
 <div style="clear: both;"></div>
