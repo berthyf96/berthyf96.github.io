@@ -4,8 +4,9 @@ all:
     venue: "*CVPR* 2022 (**Oral**)"
     teaser: vvt_teaser.png
     links:
+      - "[Webpage](http://imaging.cms.caltech.edu/vvt/){: .btn .btn--inverse}"
       - "[arXiv](https://arxiv.org/abs/2104.02735){: .btn .btn--info}"
-      - "[Website](http://imaging.cms.caltech.edu/vvt/){: .btn .btn--inverse}"
+      - "[Code](https://github.com/berthyf96/visvib-tomography){: .btn .btn--inverse}"
   - title: "Towards Unique and Informative Captioning of Images"
     authors: "Zeyu Wang, **Berthy T. Feng**, Karthik Narasimhan, Olga Russakovsky"
     venue: "*ECCV* 2020"
