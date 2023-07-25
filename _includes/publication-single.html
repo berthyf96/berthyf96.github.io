@@ -21,6 +21,7 @@
       </h2>
       <p style="margin-top: -2em;">{{ publication.authors | markdownify | remove: '<p>' | remove: '</p>'}}</p>
       <p style="margin-top: -1em;">{{ publication.venue | markdownify | remove: '<p>' | remove: '</p>'}}</p>
+      <p style="margin-top: -1em; color: rgb(255, 123, 0)">{{ publication.notes | markdownify | remove: '<p>' | remove: '</p>'}}</p>
       <p style="margin-top: -1em;">
         {% for link in publication.links %}
           {{ link | markdownify | remove: '<p>' | remove: '</p>'}}

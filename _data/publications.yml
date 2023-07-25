@@ -1,7 +1,16 @@
 all:
+  - title: "Score-Based Diffusion Models as Principled Priors for Inverse Imaging"
+    authors: "**Berthy T. Feng**, Jamie Smith, Michael Rubinstein, Huiwen Chang, Katherine L. Bouman, William T. Freeman"
+    venue: "*ICCV* 2023" 
+    teaser: score_prior_teaser.png
+    links:
+      - "[Webpage](http://imaging.cms.caltech.edu/score_prior/){: .btn .btn--inverse}"
+      - "[arXiv](https://arxiv.org/abs/2304.11751){: .btn .btn--info}"
+      - "[Code](https://github.com/google-research/google-research/tree/master/score_prior){: .btn .btn--inverse}"
   - title: "Visual Vibration Tomography: Estimating Interior Material Properties from Monocular Video"
     authors: "**Berthy T. Feng**, Alexander C. Ogren, Chiara Daraio, Katherine L. Bouman"
-    venue: "*CVPR* 2022 (**Oral**)"
+    venue: "*CVPR* 2022" 
+    notes: "**Oral, Best Paper Finalist** (top 1.6% of accepted papers)"
     teaser: vvt_teaser.png
     links:
       - "[Webpage](http://imaging.cms.caltech.edu/vvt/){: .btn .btn--inverse}"
