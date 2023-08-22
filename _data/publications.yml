@@ -6,7 +6,7 @@ all:
     links:
       - "[Webpage](http://imaging.cms.caltech.edu/score_prior/){: .btn .btn--inverse}"
       - "[arXiv](https://arxiv.org/abs/2304.11751){: .btn .btn--info}"
-      - "[Code](https://github.com/google-research/google-research/tree/master/score_prior){: .btn .btn--inverse}"
+      - "[Code](https://github.com/berthyf96/score_prior){: .btn .btn--inverse}"
   - title: "Visual Vibration Tomography: Estimating Interior Material Properties from Monocular Video"
     authors: "**Berthy T. Feng**, Alexander C. Ogren, Chiara Daraio, Katherine L. Bouman"
     venue: "*CVPR* 2022" 
