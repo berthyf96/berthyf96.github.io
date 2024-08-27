@@ -6,7 +6,9 @@
 
 <div style="clear: both;">
   <article class="publication__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
     <div class="publication__item-teaser" style="margin-top: 1em;">
+      {% if publication.teaser %}
       <img itemprop="image" src=
         {% if teaser contains "://" %}
           "{{ teaser }}"
@@ -14,7 +16,9 @@
           "{{ teaser | prepend: "/images/" | prepend: base_path }}"
         {% endif %}
         alt="">
+        {% endif %}
     </div>
+    
     <div class="publication__item-text">
       <h2 class="publication__item-title" itemprop="headline">
         {{ publication.title | markdownify }}

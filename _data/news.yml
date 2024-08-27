@@ -1,13 +1,18 @@
 # Home page news
 main:
-  - date: "Aug 2023"
-    info: "Excited to co-organize the *Quo Vadis, Computer Vision?* [workshop](https://gkioxari.github.io/Tutorials/iccv2023/) at ICCV 2023 with Prof. [Georgia Gkioxari](https://gkioxari.github.io/)!"
-  - date: "Jul 2023"
-    info: "Excited to speak at the Astro + Imaging Workshop at Northwestern, organized by Profs. [Emma Alexander](https://www.alexander.vision/) and [Jason Wang](https://jasonwang.space/#home)!"
-  - date: "Jul 2023"
-    info: "Presented a Spotlight poster at [ICCP 2023](https://iccp2023.iccp-conference.org/)"
-
+  - date: "Aug 2024"
+    info: "I will present an invited talk at [SCIEN](https://scien.stanford.edu/index.php/events/scien-seminars/) at Stanford University."
+  - date: "Aug 2024"
+    info: "I will present an invited talk at the Deep Learning for Inverse Problems workshop at DESY in Hamburg, Germany."
+  - date: "Aug 2024"
+    info: "Presented a lightning talk and poster at the Computational Imaging [workshop](https://www.imsi.institute/activities/computational-imaging/) hosted by the Institute for Mathematical and Statistical Innovation (IMSI) at the University of Chicago."
 all:
+  - date: "Aug 2024"
+    info: "I will present an invited talk at [SCIEN](https://scien.stanford.edu/index.php/events/scien-seminars/) at Stanford University."
+  - date: "Aug 2024"
+    info: "I will present an invited talk at the Deep Learning for Inverse Problems workshop at DESY in Hamburg, Germany."
+  - date: "Aug 2024"
+    info: "Presented a lightning talk and poster at the Computational Imaging [workshop](https://www.imsi.institute/activities/computational-imaging/) hosted by the Institute for Mathematical and Statistical Innovation (IMSI) at the University of Chicago."
   - date: "Aug 2023"
     info: "Excited to co-organize the *Quo Vadis, Computer Vision?* [workshop](https://gkioxari.github.io/Tutorials/iccv2023/) at ICCV 2023 with Prof. [Georgia Gkioxari](https://gkioxari.github.io/)!"
   - date: "Jul 2023"

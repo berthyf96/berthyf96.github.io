@@ -5,9 +5,8 @@ author_profile: true
 
 {% include base_path %}
 
-<h2 id="about">About</h2>
 <div><p>
-    Hello! I'm a fourth-year PhD student at Caltech working with <a href="http://users.cms.caltech.edu/~klbouman/" target="_blank">Prof. Katie Bouman</a>
+    Hello! I'm a senior PhD student at Caltech working with <a href="http://users.cms.caltech.edu/~klbouman/" target="_blank">Prof. Katie Bouman</a>
     in the <a href="http://www.cms.caltech.edu/" target="_blank">Computing & Mathematical Sciences</a> Department.
     Previously, I graduated from Princeton University <em>summa cum laude</em>, with a major in Computer Science and minor in Statistics & Machine Learning. 
     I'm interested in computational imaging, in particular incorporating sophisticated priors into ill-posed inverse problems.
@@ -40,7 +39,7 @@ author_profile: true
   <a href="#" onclick="hideBlock('allnews'); showBlock('news'); return false;" class="btn btn--inverse">Less</a>
 </div>
 
-<h2 style="clear: both;" id="publications">Publications</h2>
+<h2 style="clear: both;" id="publications">Selected Publications</h2>
 {% for publication in site.data.publications.all %}
   {% include publication-single.html %}
 {% endfor %}
