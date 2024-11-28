@@ -1,14 +1,14 @@
 # Home page news
 main:
   - date: "Nov 2024"
-    info: "I will present an invited talk at [SCIEN](https://scien.stanford.edu/index.php/events/scien-seminars/) at Stanford University."
+    info: "Presented an invited talk at the [SCIEN](https://scien.stanford.edu/index.php/events/scien-seminars/) seminar series at Stanford University."
   - date: "Oct 2024"
     info: "Presented an invited talk for the imaging reading group at Carnegie Mellon University."
   - date: "Sep 2024"
     info: "Presented an invited plenary talk at the Deep Learning for Inverse Problems [workshop](https://helmholtz-imaging.de/news/deep-learning-in-inverse-problems-workshop/) at DESY in Hamburg, Germany."
 all:
   - date: "Nov 2024"
-    info: "I will present an invited talk at [SCIEN](https://scien.stanford.edu/index.php/events/scien-seminars/) at Stanford University."
+    info: "Presented an invited talk at the [SCIEN](https://scien.stanford.edu/index.php/events/scien-seminars/) seminar series at Stanford University."
   - date: "Oct 2024"
     info: "Presented an invited talk for the imaging reading group at Carnegie Mellon University."
   - date: "Sep 2024"
