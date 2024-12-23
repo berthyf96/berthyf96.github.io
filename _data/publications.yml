@@ -1,20 +1,20 @@
-all:
+highlight:
   - title: "Neural Approximate Mirror Maps for Constrained Diffusion Models"
     authors: "**Berthy T. Feng**, Ricardo Baptista, Katherine L. Bouman"
-    venue: "*arXiv* 2024"
+    venue: "*arXiv*, 2024"
     teaser: namm_teaser.png
     links:
       - "[arXiv](https://arxiv.org/abs/2406.12816){: .btn .btn--info}"
   - title: "Event-horizon-scale Imaging of M87* under Different Assumptions via Deep Generative Image Priors"
     authors: "**Berthy T. Feng**, Katherine L. Bouman, William T. Freeman"
-    venue: "*The Astrophysical Journal (ApJ)* 2024"
+    venue: "*The Astrophysical Journal (ApJ)*, 2024"
     teaser: m87_score_prior_teaser.png
     links:
       - "[Webpage](http://imaging.cms.caltech.edu/m87_score_prior/){: .btn .btn--inverse}"
       - "[arXiv](https://arxiv.org/abs/2406.02785){: .btn .btn--info}"
   - title: "Variational Bayesian Imaging with an Efficient Surrogate Score-based Prior"
     authors: "**Berthy T. Feng**, Katherine L. Bouman"
-    venue: "*TMLR* 2024" 
+    venue: "*Transactions on Machine Learning Research (TMLR)*, 2024" 
     teaser: surrogate_prior_teaser.png
     links:
       - "[Webpage](http://imaging.cms.caltech.edu/score_prior/){: .btn .btn--inverse}"
@@ -22,7 +22,7 @@ all:
       - "[Code](https://github.com/berthyf96/score_prior){: .btn .btn--inverse}"
   - title: "Score-Based Diffusion Models as Principled Priors for Inverse Imaging"
     authors: "**Berthy T. Feng**, Jamie Smith, Michael Rubinstein, Huiwen Chang, Katherine L. Bouman, William T. Freeman"
-    venue: "*ICCV* 2023" 
+    venue: "*ICCV*, 2023" 
     teaser: score_prior_teaser.png
     links:
       - "[Webpage](http://imaging.cms.caltech.edu/score_prior/){: .btn .btn--inverse}"
@@ -30,23 +30,40 @@ all:
       - "[Code](https://github.com/berthyf96/score_prior){: .btn .btn--inverse}"
   - title: "Visual Vibration Tomography: Estimating Interior Material Properties from Monocular Video"
     authors: "**Berthy T. Feng**, Alexander C. Ogren, Chiara Daraio, Katherine L. Bouman"
-    venue: "*CVPR* 2022" 
+    venue: "*CVPR*, 2022" 
     notes: "**Oral, Best Paper Finalist** (top 1.6% of accepted papers)"
     teaser: vvt_teaser.png
     links:
       - "[Webpage](http://imaging.cms.caltech.edu/vvt/){: .btn .btn--inverse}"
       - "[arXiv](https://arxiv.org/abs/2104.02735){: .btn .btn--info}"
       - "[Code](https://github.com/berthyf96/visvib-tomography){: .btn .btn--inverse}"
+
+other:
+  - title: "Provable Probabilistic Imaging Using Score-Based Generative Priors"
+    authors: "Yu Sun, Zihui Wu, Yifan Chen, **Berthy T. Feng**, Katherine L. Bouman"
+    venue: "*IEEE Transactions on Computational Imaging (TCI)*, 2024"
+    links:
+      - "[PDF](https://ieeexplore.ieee.org/abstract/document/10645293){: .btn .btn--info}"
+  - title: "Score-based Diffusion Models for Photoacoustic Tomography Image Reconstruction"
+    authors: "Sreemanti Dey, Snigdha Saha, **Berthy T. Feng**, Manxiu Cui, Laure Delisle, Oscar Leong, Lihong V. Wang, Katherine L. Bouman"
+    venue: "*ICASSP*, 2024"
+    links:
+      - "[PDF](https://ieeexplore.ieee.org/abstract/document/10447579){: .btn .btn--info}"
+  - title: "Gaussian process regression as a surrogate model for the computation of dispersion relations"
+    authors: "Alexander C. Ogren, **Berthy T. Feng**, Katherine L. Bouman, Chiara Daraio"
+    venue: "*Computer Methods in Applied Mechanics and Engineering (CMAME)*, 2024"
+    links:
+      - "[PDF](https://www.sciencedirect.com/science/article/abs/pii/S0045782523007843){: .btn .btn--info}"
   - title: "Towards Unique and Informative Captioning of Images"
     authors: "Zeyu Wang, **Berthy T. Feng**, Karthik Narasimhan, Olga Russakovsky"
-    venue: "*ECCV* 2020"
+    venue: "*ECCV*, 2020"
     teaser: eccv20_captioning_teaser.png
     links:
       - "[PDF](http://www.ecva.net/papers/eccv_2020/papers_ECCV/html/350_ECCV_2020_paper.php){: .btn .btn--info}"
       - "[Code](https://github.com/princetonvisualai/SPICE-U){: .btn .btn--inverse}"
   - title: "Learning Bandwidth Expansion Using Perceptually-Motivated Loss"
     authors: "**Berthy T. Feng**, Zeyu Jin, Jiaqi Su, Adam Finkelstein"
-    venue: "*ICASSP* 2019"
+    venue: "*ICASSP*, 2019"
     teaser: icassp19_teaser.png
     links:
       - "[PDF](https://pixl.cs.princeton.edu/pubs/Feng_2019_LBE/Feng_2019_bwe.pdf){: .btn .btn--info}"
