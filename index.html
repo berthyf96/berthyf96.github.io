@@ -26,13 +26,13 @@ author_profile: true
   {% endfor %}
   <a href="#" onclick="hideBlock('allnews'); showBlock('news'); return false;" class="btn btn--inverse">Less</a>
 </div> -->
-<div id="news">
+<div id='news'>
   {% for item in site.data.news.main %}
   <p><strong><font class="new">{{ item.date | markdownify | remove: '<p>' | remove: '</p>'}} </font></strong>{{ item.info | markdownify | remove: '<p>' | remove: '</p>'}}</p>
   {% endfor %}
   <a href="#" onclick="hideBlock('news'); showBlock('allnews'); return false;" class="btn btn--inverse">More</a>
 </div>
-<div id="allnews" style="display: none;">
+<div id='allnews' style="display: none;">
   {% for item in site.data.news.all %}
   <p><strong><font class="new">{{ item.date | markdownify | remove: '<p>' | remove: '</p>'}} </font></strong>{{ item.info | markdownify | remove: '<p>' | remove: '</p>'}}</p>
   {% endfor %}
