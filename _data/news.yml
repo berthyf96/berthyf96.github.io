@@ -1,12 +1,18 @@
 # Home page news
 main:
+  - date: "Jan 2025"
+    info: "Check out my article on [*Seeing Beyond the Blur with Generative AI*](https://dl.acm.org/doi/10.1145/3703400) in the ACM's *XRDS* Magazine!"
   - date: "Nov 2024"
     info: "Presented an invited talk at the [SCIEN](https://scien.stanford.edu/index.php/events/scien-seminars/) seminar series at Stanford University."
   - date: "Oct 2024"
     info: "Presented an invited talk for the imaging reading group at Carnegie Mellon University."
   - date: "Sep 2024"
     info: "Presented an invited plenary talk at the Deep Learning for Inverse Problems [workshop](https://helmholtz-imaging.de/news/deep-learning-in-inverse-problems-workshop/) at DESY in Hamburg, Germany."
+  - date: "Aug 2024"
+    info: "Presented a lightning talk and poster at the Computational Imaging [workshop](https://www.imsi.institute/activities/computational-imaging/) hosted by the Institute for Mathematical and Statistical Innovation (IMSI) at the University of Chicago."
 all:
+  - date: "Jan 2025"
+    info: "Check out my article on [*Seeing Beyond the Blur with Generative AI*](https://dl.acm.org/doi/10.1145/3703400) in the ACM's *XRDS* Magazine!"
   - date: "Nov 2024"
     info: "Presented an invited talk at the [SCIEN](https://scien.stanford.edu/index.php/events/scien-seminars/) seminar series at Stanford University."
   - date: "Oct 2024"
