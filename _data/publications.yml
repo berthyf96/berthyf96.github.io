@@ -1,7 +1,7 @@
 highlight:
   - title: "Neural Approximate Mirror Maps for Constrained Diffusion Models"
     authors: "**Berthy T. Feng**, Ricardo Baptista, Katherine L. Bouman"
-    venue: "*arXiv*, 2024"
+    venue: "*ICLR*, 2025"
     teaser: namm_teaser.png
     links:
       - "[arXiv](https://arxiv.org/abs/2406.12816){: .btn .btn--info}"
