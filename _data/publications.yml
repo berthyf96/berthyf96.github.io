@@ -40,6 +40,12 @@ highlight:
       - "[Code](https://github.com/berthyf96/visvib-tomography){: .btn .btn--inverse}"
 
 other:
+  - title: "InverseBench: Benchmarking Plug-and-Play Diffusion Models for Scientific Inverse Problems"
+    authors: "Hongkai Zheng, Wenda Chu, Bingliang Zhang, Zihui Wu, Austin Wang, **Berthy T. Feng**, Caifeng Zou, Yu Sun, Nikola Borislavov Kovachki, Zachary E. Ross, Katherine L. Bouman, Yisong Yue"
+    venue: "*ICLR*, 2025"
+    notes: "**Spotlight** (top 5.1% of submitted papers)"
+    links:
+      - "[Paper](https://openreview.net/forum?id=U3PBITXNG6){: .btn .btn--info}"
   - title: "Provable Probabilistic Imaging Using Score-Based Generative Priors"
     authors: "Yu Sun, Zihui Wu, Yifan Chen, **Berthy T. Feng**, Katherine L. Bouman"
     venue: "*IEEE Transactions on Computational Imaging (TCI)*, 2024"
