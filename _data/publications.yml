@@ -1,4 +1,10 @@
 highlight:
+  - title: "Visual Surface Wave Elastography: Revealing Subsurface Physical Properties via Visible Surface Waves"
+    authors: "Alexander C. Ogren\\*, **Berthy T. Feng**\\*, Jihoon Ahn, Katherine L. Bouman, Chiara Daraio"
+    venue: "*ICCV*, 2025"
+    teaser: vswe_teaser.png
+    links:
+      - "[Paper](https://www.arxiv.org/abs/2507.09207){: .btn .btn--info}"
   - title: "Neural Approximate Mirror Maps for Constrained Diffusion Models"
     authors: "**Berthy T. Feng**, Ricardo Baptista, Katherine L. Bouman"
     venue: "*ICLR*, 2025"

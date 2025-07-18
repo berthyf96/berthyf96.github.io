@@ -1,5 +1,7 @@
 # Home page news
 main:
+  - date: "Jul 2025"
+    info: "I will teach the EHT Black-Hole Imaging course at the [ICCP Summer School](https://iccp2025.iccp-conference.org/#school)."
   - date: "Feb 2025"
     info: "I have accepted a postdoc position at MIT, starting in September! Many thanks to the NSF [IAIFI](https://iaifi.org/) and [Tayebati](https://computing.mit.edu/tayebati-postdoctoral-fellowship-program/) Postdoctoral Fellowship."
   - date: "Jan 2025"
