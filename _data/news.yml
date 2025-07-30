@@ -1,6 +1,8 @@
 # Home page news
 main:
   - date: "Jul 2025"
+    info: "I delivered a keynote at the [ML4Astro](https://ml4astro.github.io/icml2025/) workshop."
+  - date: "Jul 2025"
     info: "I taught the EHT Black-Hole Imaging course at the ICCP Summer School. Click [here](https://github.com/berthyf96/eht_imaging_tutorial) for the course materials."
   - date: "Feb 2025"
     info: "I have accepted a postdoc position at MIT, starting in September! Many thanks to the NSF [IAIFI](https://iaifi.org/) and [Tayebati](https://computing.mit.edu/tayebati-postdoctoral-fellowship-program/) Postdoctoral Fellowship."
