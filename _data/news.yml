@@ -1,11 +1,13 @@
 # Home page news
 main:
+  - date: "Oct 2025"
+    info: "I am leading the IAIFI panel at the [Boston Diffusion Day](https://kempnerinstitute.harvard.edu/events/boston-diffusion-day/) workshop."
+  - date: "Sep 2025"
+    info: "I joined MIT as a postdoc! Officially I am an NSF [IAIFI](https://iaifi.org/) Fellow and [Tayebati](https://computing.mit.edu/tayebati-postdoctoral-fellowship-program/) Postdoctoral Fellow."
   - date: "Jul 2025"
     info: "I delivered a keynote at the [ML4Astro](https://ml4astro.github.io/icml2025/) workshop."
   - date: "Jul 2025"
     info: "I taught the EHT Black-Hole Imaging course at the ICCP Summer School. Click [here](https://github.com/berthyf96/eht_imaging_tutorial) for the course materials."
-  - date: "Feb 2025"
-    info: "I have accepted a postdoc position at MIT, starting in September! Many thanks to the NSF [IAIFI](https://iaifi.org/) and [Tayebati](https://computing.mit.edu/tayebati-postdoctoral-fellowship-program/) Postdoctoral Fellowship."
   - date: "Jan 2025"
     info: "Check out my article on [*Seeing Beyond the Blur with Generative AI*](https://dl.acm.org/doi/10.1145/3703400) in the ACM's *XRDS* Magazine!"
   - date: "Nov 2024"
