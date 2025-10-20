@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Berthy Feng"
 title_separator          : "-"
 name                     : &name "Berthy Feng"
-description              : &description "PhD Student @ Caltech CMS"
+description              : &description "Postdoctoral Fellow @ MIT"
 url                      : https://www.berthyfeng.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "berthyf96.github.io"
@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Berthy Feng"
   avatar           : "profile.png"
-  bio              : "PhD Student @ Caltech CMS"
-  location         : "Pasadena, CA"
+  bio              : "Postdoctoral Fellow @ MIT"
+  location         : "Cambridge, MA"
   employer         :
   pubmed           : 
   googlescholar    : 
-  email            : bfeng@caltech.edu
+  email            : berthy@mit.edu
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
