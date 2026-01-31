@@ -1,4 +1,10 @@
 highlight:
+  - title: "Dynamic Black-hole Emission Tomography with Physics-informed Neural Fields"
+    authors: "**Berthy T. Feng**, Andrew A. Chael, David Bromley, Aviad Levis, William F. Freeman, Katherine L. Bouman"
+    venue: "*In submission*, 2026"
+    teaser: pidef_teaser.gif
+    links:
+      - "[Webpage coming soon](){: .btn .btn--inverse}"
   - title: "Visual Surface Wave Elastography: Revealing Subsurface Physical Properties via Visible Surface Waves"
     authors: "Alexander C. Ogren\\*, **Berthy T. Feng**\\*, Jihoon Ahn, Katherine L. Bouman, Chiara Daraio"
     venue: "*ICCV*, 2025"
