@@ -53,6 +53,9 @@ highlight:
       - "[Code](https://github.com/berthyf96/visvib-tomography){: .btn .btn--inverse}"
 
 other:
+  - title: "U-DAVI: Uncertainty-aware Diffusion-prior-based Amortized Variational Inference for Image Reconstruction"
+    authors: Ayush Varney, Katherine L. Bouman, **Berthy T. Feng**
+    venue: "*ICASSP*, 2026"
   - title: "InverseBench: Benchmarking Plug-and-Play Diffusion Models for Scientific Inverse Problems"
     authors: "Hongkai Zheng, Wenda Chu, Bingliang Zhang, Zihui Wu, Austin Wang, **Berthy T. Feng**, Caifeng Zou, Yu Sun, Nikola Borislavov Kovachki, Zachary E. Ross, Katherine L. Bouman, Yisong Yue"
     venue: "*ICLR*, 2025"
