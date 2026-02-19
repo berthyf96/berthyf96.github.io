@@ -1,5 +1,7 @@
 # Home page news
 main:
+  - date: "Feb 2026"
+    info: "I gave an invited talk at the [SkAI](https://skai-institute.org/) Colloquium."
   - date: "Oct 2025"
     info: "I led the IAIFI panel at the [Boston Diffusion Day](https://kempnerinstitute.harvard.edu/events/boston-diffusion-day/) workshop."
   - date: "Sep 2025"
@@ -11,6 +13,8 @@ main:
   - date: "Jan 2025"
     info: "Check out my article on [*Seeing Beyond the Blur with Generative AI*](https://dl.acm.org/doi/10.1145/3703400) in the ACM's *XRDS* Magazine!"
 all:
+  - date: "Feb 2026"
+    info: "I gave an invited talk at the [SkAI](https://skai-institute.org/) Colloquium."
   - date: "Oct 2025"
     info: "I led the IAIFI panel at the [Boston Diffusion Day](https://kempnerinstitute.harvard.edu/events/boston-diffusion-day/) workshop."
   - date: "Sep 2025"
