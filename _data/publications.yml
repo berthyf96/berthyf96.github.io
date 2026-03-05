@@ -12,6 +12,7 @@ highlight:
     venue: "*ICCV*, 2025"
     teaser: vswe_teaser.png
     links:
+      - "[Webpage](https://imaging.cms.caltech.edu/vswe/){: .btn .btn--inverse}"
       - "[Paper](https://www.arxiv.org/abs/2507.09207){: .btn .btn--info}"
       - "[Code](https://github.com/aco8ogren/vswe-iccv-2025){: .btn .btn--inverse}"
   - title: "Neural Approximate Mirror Maps for Constrained Diffusion Models"
@@ -19,6 +20,7 @@ highlight:
     venue: "*ICLR*, 2025"
     teaser: namm_teaser.png
     links:
+      - "[Webpage](https://imaging.cms.caltech.edu/namm/){: .btn .btn--inverse}"
       - "[Paper](https://openreview.net/forum?id=vgZDcUetWS){: .btn .btn--info}"
       - "[Code](https://github.com/berthyf96/namm){: .btn .btn--inverse}"
   - title: "Event-horizon-scale Imaging of M87* under Different Assumptions via Deep Generative Image Priors"
