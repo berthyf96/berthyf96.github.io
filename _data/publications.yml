@@ -2,6 +2,7 @@ highlight:
   - title: "Dynamic Black-hole Emission Tomography with Physics-informed Neural Fields"
     authors: "**Berthy T. Feng**, Andrew A. Chael, David Bromley, Aviad Levis, William T. Freeman, Katherine L. Bouman"
     venue: "*CVPR*, 2026"
+    notes: "**Highlight**"
     teaser: pidef_teaser.gif
     links:
       - "[Webpage](https://imaging.cms.caltech.edu/pidef/){: .btn .btn--inverse}"
