@@ -1,0 +1,149 @@
+/* ==========================================================================
+   COLOR THEMES
+   ==========================================================================
+   Palette (Huemint "website-2"):
+   https://huemint.com/website-2/#palette=242324-dbdcd9-d6763c-63c6ae
+
+     #242324  ink     | #dbdcd9  paper
+     #d6763c  orange  | #63c6ae  teal
+
+   Light swaps ink/paper for dark and keeps both accents, which stay legible
+   on either ground. Orange carries links and primary UI; teal is the
+   secondary highlight. On the light ground the two accents are darkened
+   (#8b4d27 / #26604f) so body-size text clears WCAG AA.
+
+   The light ground is a neutral #dcdcdc rather than the palette's #dbdcd9:
+   at that lightness the palette hex is warm enough that the orange accents
+   tip it into reading tan. Same lightness, hue removed. Dark keeps #242324.
+
+   Light is the default. Dark follows the OS via prefers-color-scheme, and
+   either can be forced with data-theme="light" / "dark" on <html> (set by the
+   masthead toggle). Every themed color is a custom property, so a theme is
+   one block of values here rather than a duplicated set of rules.
+   ========================================================================== */
+
+@mixin theme-light {
+  color-scheme: light;
+
+  /* grounds */
+  --color-bg                  : #dcdcdc;
+  --color-surface             : #e9e9e9; /* raised: dropdowns, modals */
+  --color-surface-alt         : #cdcdcd; /* recessed: footer, table head */
+  --color-code-bg             : #d1d1d1;
+  --color-scrim               : rgba(220, 220, 220, 0.85);
+
+  /* type */
+  --color-text                : #242324;
+  --color-text-muted          : #5d5d5d;
+
+  /* lines */
+  --color-border              : #c2c2c2;
+  --color-border-strong       : #a9a9a9;
+
+  /* links */
+  --color-link                : #8b4d27;
+  --color-link-hover          : #63341a;
+
+  /* accents */
+  --color-accent              : #d6763c;
+  --color-accent-soft         : #ecd2bf; /* orange washed into the paper */
+  --color-accent-2            : #26604f;
+
+  /* filled UI */
+  --color-primary             : #8b4d27;
+  --color-primary-hover       : #63341a;
+  --color-on-primary          : #f4f4f4;
+
+  /* masthead */
+  --color-masthead-link       : #242324;
+  --color-masthead-link-hover : #8b4d27;
+
+  /* state */
+  --color-focus               : #8b4d27;
+  --color-selection-bg        : #d6763c;
+  --color-selection-text      : #242324;
+
+  /* depth */
+  --shadow-sm                 : 0 1px 2px rgba(36, 35, 36, 0.12);
+  --shadow-md                 : 0 0 10px rgba(36, 35, 36, 0.22);
+
+  /* which theme-toggle icon is showing: light offers the moon */
+  --icon-to-dark-display      : block;
+  --icon-to-light-display     : none;
+
+  /* syntax highlighting (Solarized light bases) */
+  --syntax-text               : #586e75;
+  --syntax-comment            : #93a1a1;
+}
+
+@mixin theme-dark {
+  color-scheme: dark;
+
+  /* grounds */
+  --color-bg                  : #242324;
+  --color-surface             : #302f30;
+  --color-surface-alt         : #1b1a1b;
+  --color-code-bg             : #1b1a1b;
+  --color-scrim               : rgba(27, 26, 27, 0.85);
+
+  /* type */
+  --color-text                : #dbdcd9;
+  --color-text-muted          : #a3a4a0;
+
+  /* lines */
+  --color-border              : #3c3b3c;
+  --color-border-strong       : #555455;
+
+  /* links */
+  --color-link                : #d6763c;
+  --color-link-hover          : #e59a68;
+
+  /* accents */
+  --color-accent              : #d6763c;
+  --color-accent-soft         : #3a2a1e;
+  --color-accent-2            : #63c6ae;
+
+  /* filled UI */
+  --color-primary             : #d6763c;
+  --color-primary-hover       : #e59a68;
+  --color-on-primary          : #242324;
+
+  /* masthead */
+  --color-masthead-link       : #dbdcd9;
+  --color-masthead-link-hover : #d6763c;
+
+  /* state */
+  --color-focus               : #d6763c;
+  --color-selection-bg        : #d6763c;
+  --color-selection-text      : #242324;
+
+  /* depth */
+  --shadow-sm                 : 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md                 : 0 0 12px rgba(0, 0, 0, 0.6);
+
+  /* which theme-toggle icon is showing: dark offers the sun */
+  --icon-to-dark-display      : none;
+  --icon-to-light-display     : block;
+
+  /* syntax highlighting (Solarized dark bases) */
+  --syntax-text               : #93a1a1;
+  --syntax-comment            : #586e75;
+}
+
+:root {
+  @include theme-light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    @include theme-dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  @include theme-dark;
+}
+
+:root[data-theme="light"] {
+  @include theme-light;
+}

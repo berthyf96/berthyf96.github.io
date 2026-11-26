@@ -15,6 +15,72 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
+<script>
+  /* Theme: apply a stored choice before first paint, then wire up the masthead
+     toggle. With no stored choice the CSS in _themes.scss follows the OS via
+     prefers-color-scheme, so this only ever sets data-theme for an override. */
+  (function () {
+    var root = document.documentElement;
+    var stored = null;
+
+    try { stored = window.localStorage.getItem("theme"); } catch (e) { /* private mode */ }
+    if (stored === "dark" || stored === "light") {
+      root.setAttribute("data-theme", stored);
+    }
+
+    function resolved() {
+      var forced = root.getAttribute("data-theme");
+      if (forced === "dark" || forced === "light") { return forced; }
+      return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+    }
+
+    function label(button, theme) {
+      var text = theme === "dark" ? "Switch to light theme" : "Switch to dark theme";
+      button.setAttribute("aria-label", text);
+      button.setAttribute("title", text);
+    }
+
+    function syncAddressBar(theme) {
+      /* The media-scoped theme-color metas only answer to the OS preference, so
+         replace them with a single tag once a choice overrides it. */
+      var metas = document.querySelectorAll('meta[name="theme-color"]');
+      for (var i = metas.length - 1; i >= 0; i--) {
+        metas[i].parentNode.removeChild(metas[i]);
+      }
+      var meta = document.createElement("meta");
+      meta.setAttribute("name", "theme-color");
+      meta.setAttribute("content", theme === "dark" ? "#242324" : "#dcdcdc");
+      document.head.appendChild(meta);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var button = document.getElementById("theme-toggle");
+      if (!button) { return; }
+
+      label(button, resolved());
+      if (stored) { syncAddressBar(stored); }
+
+      button.addEventListener("click", function () {
+        var next = resolved() === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        try { window.localStorage.setItem("theme", next); } catch (e) { /* private mode */ }
+        label(button, next);
+        syncAddressBar(next);
+      });
+
+      /* Follow the OS if it changes while no override is in effect. */
+      var query = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
+      if (query && query.addEventListener) {
+        query.addEventListener("change", function () {
+          if (!root.getAttribute("data-theme")) { label(button, resolved()); }
+        });
+      }
+    });
+  })();
+</script>
+
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
 

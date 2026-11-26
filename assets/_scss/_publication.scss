@@ -51,7 +51,7 @@
   }
   
   .publication__item-teaser {
-    box-shadow: 0 0 10px rgba(#000, 0.25);
+    box-shadow: $box-shadow-lifted;
     border-radius: $border-radius;
     overflow: hidden;
     width: 30%; 

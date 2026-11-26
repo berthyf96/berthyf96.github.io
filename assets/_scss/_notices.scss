@@ -16,9 +16,11 @@
   font-family: $global-font-family;
   font-size: $type-size-6 !important;
   text-indent: initial; /* override*/
-  background-color: mix(#fff, $notice-color, 90%);
+  color: $text-color;
+  /* tinted with the status color so the notice works on either theme ground */
+  background-color: rgba($notice-color, 0.12);
+  border-left: 0.25em solid $notice-color;
   border-radius: $border-radius;
-  box-shadow: 0 1px 1px rgba($notice-color, 0.25);
 
   h4 {
     margin-top: 0 !important; /* override*/
@@ -44,15 +46,15 @@
   }
 
   a {
-    color: $notice-color;
+    color: $link-color;
 
     &:hover {
-      color: mix(#000, $notice-color, 40%);
+      color: $link-color-hover;
     }
   }
 
   code {
-    background-color: mix(#fff, $notice-color, 95%)
+    background-color: rgba($notice-color, 0.08)
   }
 
   ul {
@@ -65,13 +67,13 @@
 /* Default notice */
 
 .notice {
-  @include notice($light-gray);
+  @include notice($gray);
 }
 
 /* Primary notice */
 
 .notice--primary {
-  @include notice($primary-color);
+  @include notice($palette-orange);
 }
 
 /* Info notice */

@@ -79,7 +79,7 @@
       text-decoration: underline;
 
       img {
-        box-shadow: 0 0 10px rgba(#000, 0.25);
+        box-shadow: $box-shadow-lifted;
       }
     }
   }
@@ -227,7 +227,7 @@
 
 .page__meta {
   margin-top: 2em;
-  color: mix(#fff, $gray, 25%);
+  color: $text-muted-color;
   font-family: $sans-serif;
   font-size: $type-size-6;
 
@@ -267,7 +267,7 @@
   margin-bottom: 8px;
   padding: 5px 10px;
   text-decoration: none;
-  border: 1px solid $light-gray;
+  border: 1px solid $border-color-strong;
   border-radius: $border-radius;
 
   &:hover {
@@ -296,7 +296,7 @@
 
 .page__comments-form {
   padding: 1em;
-  background: $lighter-gray;
+  background: $surface-alt-color;
   transition: $global-transition;
 
   &.disabled {
@@ -398,4 +398,16 @@
   margin-bottom: 10px;
   font-size: $type-size-6;
   text-transform: uppercase;
+}
+
+
+/*
+   News list
+   ==========================================================================
+   The dated entries on the home page; teal is the secondary accent, so the
+   dates get it and the surrounding copy stays in body text.
+   ========================================================================== */
+
+.new {
+  color: $accent-color-2;
 }

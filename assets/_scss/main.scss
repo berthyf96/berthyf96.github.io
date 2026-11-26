@@ -11,6 +11,7 @@
 @import "variables";
 @import "mixins";
 @import "vendor/susy/susy";
+@import "themes"; // CSS custom properties for light/dark
 
 @import "reset";
 @import "base";
