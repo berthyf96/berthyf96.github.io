@@ -1,0 +1,78 @@
+/* ==========================================================================
+   NEWS
+   ==========================================================================
+   The dated entries on the home page. Each row is a grid so every date sits
+   in its own column and the sentences all start on the same left edge --
+   the stock markup ran the date inline with the copy, which left a ragged
+   start down the list. Below $medium there is not room for two columns, so
+   the date sits above its entry instead.
+   ========================================================================== */
+
+.news {
+  margin: 1.4em 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news__item {
+  display: grid;
+  grid-gap: 0.15rem;
+  gap: 0.15rem;
+  margin: 0;
+  padding: 0.5rem 0;
+
+  @include breakpoint($medium) {
+    grid-template-columns: 6.25rem minmax(0, 1fr);
+    grid-gap: 1.25rem;
+    gap: 1.25rem;
+    align-items: baseline;
+  }
+}
+
+.news__date {
+  color: $accent-color-2;
+  font-size: $type-size-7;
+  font-weight: $weight-semibold;
+  letter-spacing: $tracking-wide;
+  text-transform: uppercase;
+  /* lining figures of equal width, so the years stack into a clean column */
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.news__body {
+  min-width: 0;
+}
+
+/* A text button, not a boxed one: it is a disclosure for the list above it
+   rather than an action of its own. */
+.news__toggle {
+  display: -webkit-inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+          align-items: center;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  color: $link-color;
+  font-family: inherit;
+  font-size: $type-size-6;
+  font-weight: $weight-medium;
+  line-height: 1.4;
+  background: none;
+  border: 0;
+  cursor: pointer;
+
+  &:hover {
+    color: $link-color-hover;
+  }
+
+  &:focus-visible {
+    @extend %tab-focus;
+  }
+}
+
+.news__toggle-icon {
+  margin-left: 0.4em;
+  font-size: 0.9em;
+  line-height: 1;
+}

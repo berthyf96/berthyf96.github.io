@@ -4,33 +4,26 @@
   {% capture teaser %}{{ publication.teaser }}{% endcapture %}
 {% endif %}
 
-<div style="clear: both;">
-  <article class="publication__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <div class="publication__item-teaser" style="margin-top: 1em;">
-      {% if publication.teaser %}
-      <img itemprop="image" src=
-        {% if teaser contains "://" %}
-          "{{ teaser }}"
-        {% else %}
-          "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-        {% endif %}
-        alt="">
-        {% endif %}
+<article class="pub pub--featured" itemscope itemtype="http://schema.org/CreativeWork">
+  {% if publication.teaser %}
+    <div class="pub__figure">
+      <img itemprop="image" loading="lazy" alt="" src="{% if teaser contains '://' %}{{ teaser }}{% else %}{{ teaser | prepend: '/images/' | prepend: base_path }}{% endif %}">
     </div>
-    
-    <div class="publication__item-text">
-      <h2 class="publication__item-title" itemprop="headline">
-        {{ publication.title | markdownify }}
-      </h2>
-      <p style="margin-top: -2em;">{{ publication.authors | markdownify | remove: '<p>' | remove: '</p>'}}</p>
-      <p style="margin-top: -1em;">{{ publication.venue | markdownify | remove: '<p>' | remove: '</p>'}}</p>
-      <p style="margin-top: -1em; color: var(--color-accent-2)">{{ publication.notes | markdownify | remove: '<p>' | remove: '</p>'}}</p>
-      <p style="margin-top: -1em;">
-        {% for link in publication.links %}
-          {{ link | markdownify | remove: '<p>' | remove: '</p>'}}
-        {% endfor %}
+  {% endif %}
+
+  <div class="pub__body">
+    <h3 class="pub__title" itemprop="headline">{{ publication.title | markdownify | remove: '<p>' | remove: '</p>' }}</h3>
+    <p class="pub__authors">{{ publication.authors | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+    <p class="pub__venue">{{ publication.venue | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+    {% if publication.tags %}
+      <ul class="pub__tags">
+        {% for tag in publication.tags %}<li class="pub__tag">{{ tag }}</li>{% endfor %}
+      </ul>
+    {% endif %}
+    {% if publication.links %}
+      <p class="pub__links">
+        {% for link in publication.links %}{{ link | markdownify | remove: '<p>' | remove: '</p>' }}{% endfor %}
       </p>
-    </div>
-  </article>
-</div>
+    {% endif %}
+  </div>
+</article>

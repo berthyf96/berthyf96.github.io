@@ -3,8 +3,9 @@
    ========================================================================== */
 
 %tab-focus {
-  outline: 2px dotted $focus-color;
-  outline-offset: 2px;
+  outline: 2px solid $focus-color;
+  outline-offset: 3px;
+  border-radius: $border-radius;
 }
 
 /*

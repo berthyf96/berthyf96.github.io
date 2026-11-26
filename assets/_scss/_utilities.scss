@@ -201,11 +201,14 @@ body:hover .visually-hidden button {
    Navicons
    ========================================================================== */
 
+/* Hairline bars that inherit the button's color -- the toggle is a plain
+   transparent button now, not a filled block. */
 .navicon {
   position: relative;
   width: $navicon-width;
   height: $navicon-height;
-  background: $on-primary-color;
+  background: currentColor;
+  border-radius: $navicon-height;
   margin: auto;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -217,17 +220,18 @@ body:hover .visually-hidden button {
     left: 0;
     width: $navicon-width;
     height: $navicon-height;
-    background: $on-primary-color;
+    background: currentColor;
+    border-radius: $navicon-height;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
 
   &:before {
-    top: (-2 * $navicon-height);
+    top: -$navicon-gap;
   }
 
   &:after {
-    bottom: (-2 * $navicon-height);
+    bottom: -$navicon-gap;
   }
 }
 

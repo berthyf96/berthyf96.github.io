@@ -2,8 +2,14 @@
    MASTHEAD
    ========================================================================== */
 
+/* The bar follows the page down. It is translucent over whatever scrolls
+   beneath it, with a blur where the browser supports one; without that
+   support the scrim is opaque enough on its own. */
 .masthead {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: $scrim-color;
   border-bottom: 1px solid $border-color;
   -webkit-animation: intro 0.3s both;
           animation: intro 0.3s both;
@@ -11,11 +17,16 @@
           animation-delay: 0.15s;
   z-index: 20;
 
+  @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    -webkit-backdrop-filter: saturate(160%) blur(14px);
+            backdrop-filter: saturate(160%) blur(14px);
+  }
+
   &__inner-wrap {
     @include container;
     @include clearfix;
     position: relative; /* anchor for the theme toggle */
-    padding: 1em 1em 1em;
+    padding: 0.85em 1em;
     font-family: $sans-serif-narrow;
 
     @include breakpoint($x-large) {
@@ -47,10 +58,23 @@
   display: block;
   list-style-type: none;
   white-space: nowrap;
+  font-size: $type-size-6;
+  letter-spacing: $tracking-tight;
 
+  a {
+    color: $masthead-link-color;
+
+    &:hover {
+      color: $masthead-link-color-hover;
+    }
+  }
+
+  /* the site name, which doubles as the home link */
   &--lg {
     padding-right: 2em;
-    font-weight: 700;
+    font-size: $type-size-5;
+    font-weight: $weight-semibold;
+    letter-spacing: $tracking-tighter;
   }
 }
 
@@ -98,7 +122,7 @@
     border-color: $masthead-link-color-hover;
   }
 
-  &:focus {
+  &:focus-visible {
     @extend %tab-focus;
   }
 

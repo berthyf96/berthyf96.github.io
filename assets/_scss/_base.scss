@@ -10,10 +10,17 @@ html {
 body {
   margin: 0;
   padding: 0;
-  padding-bottom: 9em;
+  padding-bottom: 7em;
   color: $text-color;
   font-family: $global-font-family;
-  line-height: 1.5;
+  font-weight: $weight-normal;
+  line-height: 1.65;
+  /* Inter ships a slashed zero and a straight-sided lowercase l; both make
+     citations and arXiv ids easier to read than the defaults. */
+  font-feature-settings: "cv05" 1, "cv08" 1, "ss03" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
@@ -23,26 +30,32 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 2em 0 0.5em;
-  line-height: 1.2;
+  line-height: 1.22;
   font-family: $header-font-family;
-  font-weight: bold;
+  font-weight: $weight-semibold;
+  /* large type set at its natural tracking looks loose; pull it in, and pull
+     it in further the larger it gets */
+  letter-spacing: $tracking-tight;
+  text-wrap: balance;
 }
 
 h1 {
   margin-top: 0;
-  font-size: $type-size-3;
+  font-size: $type-size-2;
+  font-weight: $weight-bold;
+  letter-spacing: $tracking-tighter;
 }
 
 h2 {
-  font-size: $type-size-4;
+  font-size: $type-size-3;
 }
 
 h3 {
-  font-size: $type-size-5;
+  font-size: $type-size-4;
 }
 
 h4 {
-  font-size: $type-size-6;
+  font-size: $type-size-5;
 }
 
 h5 {
@@ -51,6 +64,9 @@ h5 {
 
 h6 {
   font-size: $type-size-6;
+  color: $text-muted-color;
+  text-transform: uppercase;
+  letter-spacing: $tracking-wide;
 }
 
 small, .small {
@@ -59,6 +75,7 @@ small, .small {
 
 p {
   margin-bottom: 1.3em;
+  text-wrap: pretty;
 }
 
 u,
@@ -94,10 +111,11 @@ abbr[data-original-title] {
 
 blockquote {
   margin: 2em 1em 2em 0;
-  padding-left: 1em;
+  padding-left: 1.25em;
   padding-right: 1em;
+  color: $text-muted-color;
   font-style: italic;
-  border-left: 0.25em solid $accent-color-2;
+  border-left: 2px solid $accent-color-2;
 
   cite {
     font-style: italic;
@@ -112,7 +130,10 @@ blockquote {
 /* links */
 
 a {
-  &:focus {
+  /* :focus-visible, not :focus -- a mouse click should not draw a ring. The
+     browser default still covers anything that predates the selector, since
+     nothing here suppresses it. */
+  &:focus-visible {
     @extend %tab-focus;
   }
 
@@ -196,7 +217,7 @@ figure {
 
   img {
     width: 100%;
-    border-radius: $border-radius;
+    border-radius: $border-radius-lg;
     -webkit-transition: $global-transition;
     transition: $global-transition;
   }
@@ -306,10 +327,42 @@ nav {
 }
 
 /*
-   Global animation transition
+   Motion
+   ==========================================================================
+   The stock theme put `transition: all` on a long list of elements, which
+   meant a hover could animate layout as readily as color. Transitions now
+   live on the components that actually need them, and the whole lot backs
+   off when the visitor has asked for less motion.
    ========================================================================== */
 
-b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a, tr, td, form button, input[type="submit"], .btn, .highlight, .archive__item-teaser {
+a,
+button,
+input,
+.btn {
   -webkit-transition: $global-transition;
-  transition: $global-transition;
+          transition: $global-transition;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* anchor targets clear the sticky masthead */
+  scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

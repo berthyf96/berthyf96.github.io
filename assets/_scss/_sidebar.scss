@@ -1,29 +1,23 @@
 /* ==========================================================================
    SIDEBAR
-   ========================================================================== */
-
-/*
-   Default
+   ==========================================================================
+   The author card: portrait, name, one line of affiliation, and the contact
+   links. On wide screens it follows the page down, so the reader always has
+   the name and the email within reach while they scroll the publication
+   list; below $large it collapses into a normal block above the content.
    ========================================================================== */
 
 .sidebar {
-  -webkit-transform: translate3d(0, 0 , 0);
-          transform: translate3d(0, 0 , 0);
-
   @include clearfix();
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 
   @include breakpoint($large) {
     @include span(2 of 12);
-    opacity: 1;
-    -webkit-transition: opacity 0.2s ease-in-out;
-            transition: opacity 0.2s ease-in-out;
-
-    &:hover {
-      opacity: 1;
-    }
+    position: -webkit-sticky;
+    position: sticky;
+    /* clears the sticky masthead */
+    top: 5.5rem;
   }
-
 
   @include breakpoint($x-large) {
     padding-right: 0;
@@ -65,16 +59,18 @@
   }
 }
 
+
 /*
-   Author profile and links
+   Author profile
+   ==========================================================================
+   Narrow screens lay the portrait and the name out side by side; from $large
+   the whole card stacks into the left column.
    ========================================================================== */
 
 .author__avatar {
   display: table-cell;
   vertical-align: top;
-  width: 36px;
-  // set width only, for non-square avatars
-  // height: 36px;
+  width: 72px;
 
   @include breakpoint($large) {
     display: block;
@@ -83,22 +79,20 @@
   }
 
   img {
-    max-width: 175px;
+    max-width: 170px;
     border-radius: 50%;
-
-    @include breakpoint($large) {
-      padding: 5px;
-      border: 1px solid $border-color;
-    }
+    /* a hairline ring drawn on the edge of the image rather than a padded
+       border, so the portrait keeps its full size */
+    box-shadow: 0 0 0 1px $border-color;
   }
 }
 
 .author__content {
   display: table-cell;
-  vertical-align: top;
-  padding-left: 15px;
-  padding-right: 25px;
-  line-height: 1;
+  vertical-align: middle;
+  padding-left: 1em;
+  padding-right: 1em;
+  line-height: 1.3;
 
   @include breakpoint($large) {
     display: block;
@@ -112,126 +106,91 @@
   margin: 0;
 
   @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 1.1rem;
+    margin-bottom: 0.1rem;
   }
 }
+
 .sidebar .author__name {
   font-family: $sans-serif;
-  font-size: $type-size-5;
+  font-size: $type-size-4;
+  font-weight: $weight-semibold;
+  letter-spacing: $tracking-tighter;
 }
 
-.author__bio {
+.sidebar .author__bio {
   margin: 0;
+  color: $text-muted-color;
+  font-size: $type-size-6;
+  line-height: 1.45;
 
   @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 1.2rem;
   }
 }
 
-.author__urls-wrapper {
-  position: relative;
+.author__links-wrapper {
   display: table-cell;
   vertical-align: middle;
   font-family: $sans-serif;
-  z-index: 10;
-  position: relative;
-  cursor: pointer;
-
-  li:last-child {
-    a {
-      margin-bottom: 0;
-    }
-  }
 
   @include breakpoint($large) {
     display: block;
-  }
-
-  button {
-    margin-bottom: 0;
-
-    @include breakpoint($large) {
-      display: none;
-    }
   }
 }
 
-.author__urls {
-  display: none;
-  position: absolute;
-  right: 0;
-  margin-top: 15px;
-  padding: 10px;
+.author__links {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-  background: $surface-color;
-  z-index: -1;
-  box-shadow: $box-shadow-lifted;
-  cursor: default;
-
-  @include breakpoint($large) {
-    display: block;
-    position: relative;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    box-shadow: none;
-  }
-
-  &:before {
-    display: block;
-    content: "";
-    position: absolute;
-    top: -11px;
-    left: calc(50% - 10px);
-    width: 0;
-    border-style: solid;
-    border-width: 0 10px 10px;
-    border-color: $border-color transparent;
-    z-index: 0;
-
-    @include breakpoint($large) {
-      display: none;
-    }
-  }
-
-  &:after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: calc(50% - 10px);
-    width: 0;
-    border-style: solid;
-    border-width: 0 10px 10px;
-    border-color: $surface-color transparent;
-    z-index: 1;
-
-    @include breakpoint($large) {
-      display: none;
-    }
-  }
 
   li {
+    margin-bottom: 0;
     white-space: nowrap;
+  }
+
+  /* The list reads as a row of chips on narrow screens and as a stacked
+     index in the sidebar column. */
+  @include breakpoint(max-width $large) {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      margin-right: 1.1em;
+    }
+  }
+
+  /* The size is set once, on the row. Putting it on the anchor as well made
+     every linked row render a step smaller than the plain ones, because an
+     em on the anchor multiplies the em already on its li. */
+  li {
+    display: block;
+    padding-top: 0.22em;
+    padding-bottom: 0.22em;
+    color: $text-muted-color;
+    font-size: $type-size-6;
   }
 
   a {
     display: block;
-    margin-bottom: 5px;
-    padding-right: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-right: 0.3em;
     color: inherit;
-    font-size: $type-size-5;
     text-decoration: none;
 
     &:hover {
-      text-decoration: underline;
+      color: $link-color;
+      text-decoration: none;
     }
+  }
+
+  /* the Font Awesome / Academicons glyph in front of each entry */
+  .fa,
+  .fas,
+  .fab,
+  .far,
+  .ai {
+    margin-right: 0.15em;
+    opacity: 0.75;
   }
 }

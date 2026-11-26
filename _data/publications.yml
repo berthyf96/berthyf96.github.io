@@ -2,7 +2,7 @@ highlight:
   - title: "Dynamic Black-hole Emission Tomography with Physics-informed Neural Fields"
     authors: "**Berthy T. Feng**, Andrew A. Chael, David Bromley, Aviad Levis, William T. Freeman, Katherine L. Bouman"
     venue: "*CVPR*, 2026"
-    notes: "**Highlight**"
+    tags: ["Highlight"]
     teaser: pidef_teaser.gif
     links:
       - "[Webpage](https://imaging.cms.caltech.edu/pidef/){: .btn .btn--inverse}"
@@ -50,7 +50,7 @@ highlight:
   - title: "Visual Vibration Tomography: Estimating Interior Material Properties from Monocular Video"
     authors: "**Berthy T. Feng**, Alexander C. Ogren, Chiara Daraio, Katherine L. Bouman"
     venue: "*CVPR*, 2022" 
-    notes: "**Oral, Best Paper Finalist** (top 1.6% of accepted papers)"
+    tags: ["Best Paper Finalist", "Oral"]
     teaser: vvt_teaser.png
     links:
       - "[Webpage](http://imaging.cms.caltech.edu/vvt/){: .btn .btn--inverse}"
@@ -61,10 +61,11 @@ other:
   - title: "U-DAVI: Uncertainty-aware Diffusion-prior-based Amortized Variational Inference for Image Reconstruction"
     authors: Ayush Varney, Katherine L. Bouman, **Berthy T. Feng**
     venue: "*ICASSP*, 2026"
+    tags: ["Mentor"]
   - title: "InverseBench: Benchmarking Plug-and-Play Diffusion Models for Scientific Inverse Problems"
     authors: "Hongkai Zheng, Wenda Chu, Bingliang Zhang, Zihui Wu, Austin Wang, **Berthy T. Feng**, Caifeng Zou, Yu Sun, Nikola Borislavov Kovachki, Zachary E. Ross, Katherine L. Bouman, Yisong Yue"
     venue: "*ICLR*, 2025"
-    notes: "**Spotlight** (top 5.1% of submitted papers)"
+    tags: ["Spotlight"]
     links:
       - "[Paper](https://openreview.net/forum?id=U3PBITXNG6){: .btn .btn--inverse}"
   - title: "Provable Probabilistic Imaging Using Score-Based Generative Priors"
@@ -75,6 +76,7 @@ other:
   - title: "Score-based Diffusion Models for Photoacoustic Tomography Image Reconstruction"
     authors: "Sreemanti Dey, Snigdha Saha, **Berthy T. Feng**, Manxiu Cui, Laure Delisle, Oscar Leong, Lihong V. Wang, Katherine L. Bouman"
     venue: "*ICASSP*, 2024"
+    tags: ["Mentor"]
     links:
       - "[Paper](https://ieeexplore.ieee.org/abstract/document/10447579){: .btn .btn--inverse}"
   - title: "Gaussian process regression as a surrogate model for the computation of dispersion relations"

@@ -10,13 +10,13 @@
   /* default button */
   display: inline-block;
   margin-bottom: 0.25em;
-  padding: 0.4em 0.95em;
+  padding: 0.34em 0.9em;
   color: $on-primary-color !important;
   font-family: $sans-serif;
-  font-size: $type-size-6;
-  font-weight: 600;
-  line-height: 1.4;
-  letter-spacing: 0.02em;
+  font-size: $type-size-7;
+  font-weight: $weight-medium;
+  line-height: 1.5;
+  letter-spacing: 0;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -24,8 +24,12 @@
   /* transparent rather than none, so filled and outlined buttons measure
      the same and sit on one line */
   border: 1px solid transparent !important;
-  border-radius: 3px;
+  /* Slightly rounded rather than a full pill. The tags next to these are cut
+     square, and a pill against a square edge made the two look unrelated. */
+  border-radius: $border-radius;
   cursor: pointer;
+  -webkit-transition: $global-transition;
+          transition: $global-transition;
 
   &:hover {
     background-color: $primary-color-hover;
@@ -50,14 +54,18 @@
     }
   }
 
-  /* for dark backgrounds */
+  /* Outlined button -- what the publication links use. It is the hollow form
+     of the primary button: same orange on the border and label at rest, and
+     on hover that same orange simply floods in. The fill is the whole state
+     change, so the orange itself does not shift. */
 
   &--inverse {
-    color: $text-color !important;
-    border-color: $border-color-strong !important; /* override*/
+    color: $primary-color !important;
+    border-color: $primary-color !important; /* override*/
     background-color: transparent;
 
     &:hover {
+      /* the label has to leave the orange once the orange is behind it */
       color: $on-primary-color !important;
       border-color: $primary-color !important;
       background-color: $primary-color;

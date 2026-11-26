@@ -175,12 +175,13 @@
 .greedy-nav {
   position: relative;
   min-width: 250px;
-  background: $background-color;
+  /* transparent, so the masthead's blurred scrim shows through */
+  background: transparent;
 
   a {
     display: block;
-    margin: 0 1rem;
-    padding: 0.5rem 0;
+    margin: 0 1.1rem;
+    padding: 0.4rem 0;
     color: $masthead-link-color;
     text-decoration: none;
 
@@ -195,10 +196,13 @@
     right: 0;
     padding: 0 0.5rem;
     border: 0;
-    outline: none;
-    background-color: $primary-color;
-    color: $on-primary-color;
+    background-color: transparent;
+    color: $masthead-link-color;
     cursor: pointer;
+
+    &:focus-visible {
+      @extend %tab-focus;
+    }
   }
 
   .visible-links {
@@ -209,7 +213,7 @@
       vertical-align: middle;
 
       &:first-child {
-        font-weight: bold;
+        font-weight: $weight-semibold;
 
         a {
           margin-left: 0;
@@ -226,12 +230,14 @@
     a {
       position: relative;
 
+      /* a hairline that wipes in on hover, rather than the stock 4px slab */
       &:before {
         content: "";
         position: absolute;
         left: 0;
-        bottom: 0;
-        height: 4px;
+        bottom: 0.1rem;
+        height: 2px;
+        border-radius: $border-radius-pill;
         background: $accent-color;
         width: 100%;
         -webkit-transition: $global-transition;

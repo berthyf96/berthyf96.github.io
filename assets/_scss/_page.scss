@@ -50,14 +50,27 @@
 
 .page__content {
 
+  /* Section headings carry a hairline rule and a generous amount of air above
+     them -- that gap is what separates one section from the next, so the rule
+     itself can stay faint instead of doing the work on its own. */
   h2 {
-    padding-bottom: 0.5em;
+    margin-top: 2.75em;
+    padding-bottom: 0.4em;
+    font-size: $type-size-3;
+    font-weight: $weight-semibold;
+    letter-spacing: $tracking-tighter;
     border-bottom: 1px solid $border-color;
   }
 
-  p, li, dl {
-    font-size: 1em;
+  > h2:first-child {
+    margin-top: 1.5em;
   }
+
+  /* The theme forced `font-size: 1em` on every p/li/dl in here. Being a
+     descendant selector it outranked the component classes, so anything that
+     asked for a smaller size -- publication authors, venues, tags, notes --
+     silently rendered at body size. Dropping it changes nothing on its own,
+     since these inherit 1em from the body anyway. */
 
   /* paragraph indents */
   p {
@@ -403,12 +416,35 @@
 
 
 /*
-   News list
+   Home page intro
    ==========================================================================
-   The dated entries on the home page; teal is the secondary accent, so the
-   dates get it and the surrounding copy stays in body text.
+   The opening paragraphs above the first section heading. They run a step
+   larger than body copy, and the hiring note is pulled into a tinted panel
+   -- it was bold body text before, which at this length read as shouting
+   rather than as a standing notice.
    ========================================================================== */
 
-.new {
-  color: $accent-color-2;
+.intro {
+  margin-bottom: 0.5em;
+}
+
+/* Both opening paragraphs run at the same step above body copy -- they are
+   one introduction, so sizing only the first made the second read as a
+   footnote to it. */
+.page__content .intro > p {
+  font-size: $type-size-4;
+  line-height: 1.5;
+  letter-spacing: $tracking-tight;
+}
+
+.page__content .intro > .intro__callout {
+  margin: 1.75em 0 0;
+  padding: 1em 1.15em;
+  color: $text-color;
+  font-size: $type-size-6;
+  letter-spacing: 0;
+  line-height: 1.6;
+  background-color: $accent-soft-color;
+  border-left: 2px solid $accent-color;
+  border-radius: 0 $border-radius $border-radius 0;
 }

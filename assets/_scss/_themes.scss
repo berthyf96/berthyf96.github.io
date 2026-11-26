@@ -12,9 +12,13 @@
    secondary highlight. On the light ground the two accents are darkened
    (#8b4d27 / #26604f) so body-size text clears WCAG AA.
 
-   The light ground is a neutral #dcdcdc rather than the palette's #dbdcd9:
-   at that lightness the palette hex is warm enough that the orange accents
-   tip it into reading tan. Same lightness, hue removed. Dark keeps #242324.
+   The light ground is a pale seafoam sitting just off white (#f0f8f4)
+   rather than the palette's #dbdcd9, which is both flatter and a good deal
+   darker. Everything else in the light theme is tinted to match -- a neutral
+   grey border or surface against a green page reads as a dirty patch rather
+   than as a quieter shade of the same paper. It also puts the ground in the
+   teal accent's family, so the tags and news dates sit on it as a deeper
+   version of the page rather than as a foreign colour. Dark keeps #242324.
 
    Light is the default. Dark follows the OS via prefers-color-scheme, and
    either can be forced with data-theme="light" / "dark" on <html> (set by the
@@ -26,19 +30,19 @@
   color-scheme: light;
 
   /* grounds */
-  --color-bg                  : #dcdcdc;
-  --color-surface             : #e9e9e9; /* raised: dropdowns, modals */
-  --color-surface-alt         : #cdcdcd; /* recessed: footer, table head */
-  --color-code-bg             : #d1d1d1;
-  --color-scrim               : rgba(220, 220, 220, 0.85);
+  --color-bg                  : #f0f8f4;
+  --color-surface             : #f9fdfb; /* raised: dropdowns, modals */
+  --color-surface-alt         : #e2eee8; /* recessed: footer, table head */
+  --color-code-bg             : #e6f0ea;
+  --color-scrim               : rgba(240, 248, 244, 0.85);
 
   /* type */
   --color-text                : #242324;
-  --color-text-muted          : #5d5d5d;
+  --color-text-muted          : #55605a; /* tinted; 6.1:1 on the seafoam */
 
   /* lines */
-  --color-border              : #c2c2c2;
-  --color-border-strong       : #a9a9a9;
+  --color-border              : #d7e6de;
+  --color-border-strong       : #b6cdc2;
 
   /* links */
   --color-link                : #8b4d27;
@@ -49,10 +53,19 @@
   --color-accent-soft         : #ecd2bf; /* orange washed into the paper */
   --color-accent-2            : #26604f;
 
+  /* Tags: a solid dark fill with light text, in both themes. A wash of the
+     accent sat too close to the page ground to read as a shape, and it took
+     the cut-out eyelet with it -- the hole is painted in the page ground, so
+     it is only ever as visible as the fill is. Light text here is 6.6:1, and
+     the fill clears the page at 5.3:1. */
+  --color-tag-bg              : #26604f;
+  --color-tag-text            : #f2f6f4;
+
   /* filled UI */
   --color-primary             : #8b4d27;
   --color-primary-hover       : #63341a;
   --color-on-primary          : #f4f4f4;
+
 
   /* masthead */
   --color-masthead-link       : #242324;
@@ -63,9 +76,14 @@
   --color-selection-bg        : #d6763c;
   --color-selection-text      : #242324;
 
-  /* depth */
-  --shadow-sm                 : 0 1px 2px rgba(36, 35, 36, 0.12);
-  --shadow-md                 : 0 0 10px rgba(36, 35, 36, 0.22);
+  /* depth -- layered elevation rather than the stock even-spread glow, so a
+     raised element reads as sitting above the page instead of haloed */
+  --shadow-sm                 : 0 1px 2px rgba(36, 35, 36, 0.08);
+  --shadow-md                 : 0 2px 6px rgba(36, 35, 36, 0.10), 0 8px 24px rgba(36, 35, 36, 0.08);
+  --shadow-lg                 : 0 4px 10px rgba(36, 35, 36, 0.12), 0 16px 40px rgba(36, 35, 36, 0.14);
+
+  /* a ground one step off the page, for hovered rows and quiet fills */
+  --color-surface-hover       : rgba(36, 35, 36, 0.05);
 
   /* which theme-toggle icon is showing: light offers the moon */
   --icon-to-dark-display      : block;
@@ -103,10 +121,17 @@
   --color-accent-soft         : #3a2a1e;
   --color-accent-2            : #63c6ae;
 
+  /* lifted off the light theme's value: the same #26604f on this ground reads
+     as murk rather than as a tag. 5.1:1 for the text, 2.8:1 for the fill
+     against the page, which is what keeps the eyelet legible. */
+  --color-tag-bg              : #2e7360;
+  --color-tag-text            : #f2f6f4;
+
   /* filled UI */
   --color-primary             : #d6763c;
   --color-primary-hover       : #e59a68;
   --color-on-primary          : #242324;
+
 
   /* masthead */
   --color-masthead-link       : #dbdcd9;
@@ -117,9 +142,12 @@
   --color-selection-bg        : #d6763c;
   --color-selection-text      : #242324;
 
-  /* depth */
-  --shadow-sm                 : 0 1px 2px rgba(0, 0, 0, 0.5);
-  --shadow-md                 : 0 0 12px rgba(0, 0, 0, 0.6);
+  /* depth -- see the light theme; dark needs more opacity to read at all */
+  --shadow-sm                 : 0 1px 2px rgba(0, 0, 0, 0.45);
+  --shadow-md                 : 0 2px 6px rgba(0, 0, 0, 0.45), 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg                 : 0 4px 10px rgba(0, 0, 0, 0.5), 0 16px 40px rgba(0, 0, 0, 0.45);
+
+  --color-surface-hover       : rgba(219, 220, 217, 0.06);
 
   /* which theme-toggle icon is showing: dark offers the sun */
   --icon-to-dark-display      : none;

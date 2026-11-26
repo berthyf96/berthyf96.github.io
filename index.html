@@ -5,7 +5,7 @@ author_profile: true
 
 {% include base_path %}
 
-<div>
+<div class="intro">
   <p>
     I work on computational imaging for science.
     In particular, I develop methods for carefully using priors, such as AI and scientific knowledge, to push the limits of conventional optics.
@@ -13,33 +13,56 @@ author_profile: true
   <p>
     I'm currently a Postdoctoral Fellow at MIT and IAIFI, working with Prof. Bill Freeman.
     I obtained my PhD from Caltech, where I was advised by Prof. Katie Bouman.
-    Previously, I graduated from Princeton University <em>summa cum laude</em>, with a major in Computer Science and minor in Statistics & Machine Learning. 
+    Previously, I graduated from Princeton University <em>summa cum laude</em>, with a major in Computer Science and minor in Statistics & Machine Learning.
   </p>
-  <p><b>I will start as an Assistant Professor of Computer Science at NYU in September 2027. Reach out (berthy [at] mit.edu) if you're interested in joining my group!</b></p>
+  <p class="intro__callout">
+    I will start as an Assistant Professor of Computer Science at NYU in September 2027.
+    Reach out (berthy [at] mit.edu) if you're interested in joining my group!
+  </p>
 </div>
 
-<h2>News</h2>
-<div id='news'>
-  {% for item in site.data.news.main %}
-  <p><strong><font class="new">{{ item.date | markdownify | remove: '<p>' | remove: '</p>'}} </font></strong>{{ item.info | markdownify | remove: '<p>' | remove: '</p>'}}</p>
+<h2 id="news">News</h2>
+
+<div id="news-recent">
+  <ul class="news">
+    {% for item in site.data.news.main %}
+      <li class="news__item">
+        <span class="news__date">{{ item.date }}</span>
+        <span class="news__body">{{ item.info | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+  <button type="button" class="news__toggle" onclick="hideBlock('news-recent'); showBlock('news-all');">
+    More <span class="news__toggle-icon" aria-hidden="true">&#8595;</span>
+  </button>
+</div>
+
+<div id="news-all" style="display: none;">
+  <ul class="news">
+    {% for item in site.data.news.all %}
+      <li class="news__item">
+        <span class="news__date">{{ item.date }}</span>
+        <span class="news__body">{{ item.info | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+  <button type="button" class="news__toggle" onclick="hideBlock('news-all'); showBlock('news-recent');">
+    Less <span class="news__toggle-icon" aria-hidden="true">&#8593;</span>
+  </button>
+</div>
+
+<h2 id="publications">Highlighted Publications</h2>
+
+<div class="pub-list">
+  {% for publication in site.data.publications.highlight %}
+    {% include publication-single-teaser.html %}
   {% endfor %}
-  <a href="#" onclick="hideBlock('news'); showBlock('allnews'); return false;" class="btn btn--inverse">More</a>
 </div>
-<div id='allnews' style="display: none;">
-  {% for item in site.data.news.all %}
-  <p><strong><font class="new">{{ item.date | markdownify | remove: '<p>' | remove: '</p>'}} </font></strong>{{ item.info | markdownify | remove: '<p>' | remove: '</p>'}}</p>
+
+<h2 id="other-publications">Other Publications</h2>
+
+<div class="pub-list">
+  {% for publication in site.data.publications.other %}
+    {% include publication-single.html %}
   {% endfor %}
-  <a href="#" onclick="hideBlock('allnews'); showBlock('news'); return false;" class="btn btn--inverse">Less</a>
 </div>
-
-<h2 style="clear: both;" id="publications">Highlighted Publications</h2>
-{% for publication in site.data.publications.highlight %}
-  {% include publication-single-teaser.html %}
-{% endfor %}
-<div style="clear: both;"></div>
-
-<h2 style="clear: both;" id="publications">Other Publications</h2>
-{% for publication in site.data.publications.other %}
-  {% include publication-single.html %}
-{% endfor %}
-<div style="clear: both;"></div>

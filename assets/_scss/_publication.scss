@@ -1,63 +1,192 @@
 /* ==========================================================================
-   PUBLICATION
+   PUBLICATIONS
+   ==========================================================================
+   One entry per paper, laid out as a grid rather than the float-and-negative-
+   margin stack the theme shipped with: the teaser sits in a fixed column and
+   the metadata lines up beside it, so a long title reflows without dragging
+   the image out of place.
+
+   Two shapes share this file. `.pub--featured` carries a teaser image;
+   `.pub` on its own is the text-only row used for the secondary list.
    ========================================================================== */
 
-   .publication {
-    margin-bottom: 2em;
-  
+.pub-list {
+  margin-top: 1.5em;
+}
+
+.pub {
+  padding: 1.6rem 0;
+  border-top: 1px solid $border-color;
+
+  &:first-child {
+    padding-top: 0.5rem;
+    border-top: 0;
+  }
+
+  /* Three widths. Stacked on a phone, with the figure capped so it does not
+     run the full measure and push the title off the screen; a narrow side
+     column from $small; the full-size column from $medium. */
+  &--featured {
+    display: grid;
+    grid-gap: 0.9rem;
+    gap: 0.9rem;
+
+    .pub__figure {
+      max-width: 20rem;
+    }
+
+    @include breakpoint($small) {
+      grid-template-columns: 9rem minmax(0, 1fr);
+      grid-gap: 1.25rem;
+      gap: 1.25rem;
+      align-items: start;
+
+      .pub__figure {
+        max-width: none;
+      }
+    }
+
     @include breakpoint($medium) {
-      @include span(12 of 12);
-    }
-  
-    @include breakpoint($large) {
-      @include span(10 of 12 last);
-      @include prefix(0.5 of 12);
-    }
-  
-    a {
-      color: inherit;
-      text-decoration: none;
+      grid-template-columns: 13rem minmax(0, 1fr);
+      grid-gap: 1.6rem;
+      gap: 1.6rem;
     }
   }
-  
-  .publication__item {
-    font-size: .85em;
-  }
-  
-  
-  .publication__item-title {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    font-family: $sans-serif-narrow;
-  
-    a + a {
-      opacity: 0.5;
-    }
-  }
-  
-  // remove border
-  .page__content {
-  
-    .publication__item-title {
-      margin-top: 1em;
-      border-bottom: none;
-    }
-  }
-  
-  .publication__item-text {
-    width: 65%; 
-    float: left; 
-    padding-left: 20px; 
-  }
-  
-  .publication__item-teaser {
-    box-shadow: $box-shadow-lifted;
-    border-radius: $border-radius;
-    overflow: hidden;
-    width: 30%; 
-    float: left;
+}
+
+.pub__figure {
+  overflow: hidden;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-lg;
+  background-color: $surface-alt-color;
+  -webkit-transition: $lift-transition;
+          transition: $lift-transition;
+
+  img {
+    display: block;
+    width: 100%;
     height: auto;
-    img {
-      width: 100%;
-    }
   }
+
+  &:hover {
+    border-color: $border-color-strong;
+    box-shadow: $box-shadow-lifted;
+    -webkit-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+}
+
+.pub__body {
+  min-width: 0; /* let long titles wrap instead of widening the grid track */
+}
+
+/* The four metadata lines are a single block of text, so they sit tight to
+   each other and only the group is spaced from its neighbours. */
+.page__content .pub__title,
+.page__content .pub__authors,
+.page__content .pub__venue {
+  margin: 0 0 0.2em;
+}
+
+.page__content .pub__title {
+  margin-top: 0;
+  margin-bottom: 0.35em;
+  font-size: $type-size-5;
+  font-weight: $weight-semibold;
+  line-height: 1.35;
+  letter-spacing: $tracking-tight;
+  /* paper titles are long enough that balancing them leaves the first line
+     short of the measure; `pretty` only guards the last line against an
+     orphan, which is what these actually need */
+  text-wrap: pretty;
+  border-bottom: 0;
+}
+
+.pub__authors {
+  color: $text-muted-color;
+  font-size: $type-size-6;
+  line-height: 1.5;
+
+  /* the site owner's own name, bolded in the data file */
+  strong {
+    color: $text-color;
+    font-weight: $weight-semibold;
+  }
+}
+
+.pub__venue {
+  color: $text-muted-color;
+  font-size: $type-size-6;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Distinctions, in the order the data file gives them.
+   A tag sits next to the link buttons, so it matches their box exactly --
+   same font size, padding, line-height and 1px border -- and then takes the
+   silhouette of a physical luggage tag: pointed end, punched hole, square
+   right edge. Nothing about that shape reads as pressable, so a tag and a
+   button can share a row without the tag looking like a dead control. */
+.pub__tags {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5em 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pub__tag {
+  position: relative;
+  margin: 0 0.4em 0.4em 0;
+  /* matches .btn on padding, line-height and the transparent 1px border, so a
+     tag and a button sitting side by side are the same height. The left
+     padding is wider to clear the point and the hole. */
+  padding: 0.34em 0.9em 0.34em 1.75em;
+  color: $tag-text-color;
+  font-size: $type-size-7;
+  font-weight: $weight-semibold;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  white-space: nowrap;
+  background-color: $tag-bg-color;
+  border: 1px solid transparent;
+  /* Square right corners. Rounding them fought the clipped point -- one end
+     soft, the other a hard angle -- and the shape read as unresolved rather
+     than as a tag. Every edge is straight now, so the point is the only
+     thing doing the shaping. */
+  border-radius: 0;
+  /* the notch: a point at the middle of the left edge */
+  -webkit-clip-path: polygon(0 50%, 0.7em 0, 100% 0, 100% 100%, 0.7em 100%);
+          clip-path: polygon(0 50%, 0.7em 0, 100% 0, 100% 100%, 0.7em 100%);
+
+  /* the eyelet, punched by painting the page ground back over the fill --
+     these sit directly on the page, so there is nothing else to show through */
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 1em;
+    width: 0.38em;
+    height: 0.38em;
+    margin-top: -0.19em;
+    background-color: $background-color;
+    border-radius: 50%;
+  }
+}
+
+
+.page__content .pub__tag {
+  margin-bottom: 0.4em;
+}
+
+.page__content .pub__links {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.6em 0 0;
+
+  .btn {
+    margin: 0 0.4em 0.4em 0;
+  }
+}
