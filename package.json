@@ -1,38 +1,24 @@
 {
-  "name": "minimal-mistakes",
-  "version": "3.4.2",
-  "description": "Minimal Mistakes Jekyll theme npm build scripts",
+  "name": "berthyfeng.com",
+  "version": "1.0.0",
+  "description": "Build scripts for berthyfeng.com",
+  "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/mmistakes/minimal-mistakes.git"
+    "url": "git://github.com/berthyf96/berthyf96.github.io.git"
   },
-  "keywords": [
-    "jekyll",
-    "theme",
-    "minimal"
-  ],
-  "author": "Michael Rose",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mmistakes/minimal-mistakes/issues"
-  },
-  "homepage": "https://mmistakes.github.io/minimal-mistakes/",
-  "engines": {
-    "node": ">= 0.10.0"
+  "scripts": {
+    "scss": "sass --style compressed --sourcemap=none assets/_scss/main.scss assets/css/main.css",
+    "uglify": "uglifyjs assets/js/vendor/jquery/jquery-1.12.4.min.js assets/js/plugins/jquery.greedy-navigation.js -c -m -o assets/js/main.min.js",
+    "build:css": "npm run scss",
+    "build:js": "npm run uglify",
+    "build:all": "npm run build:css && npm run build:js",
+    "watch": "onchange \"assets/_scss/**/*.scss\" -- npm run build:css"
   },
   "devDependencies": {
     "npm-run-all": "^1.7.0",
     "onchange": "^2.2.0",
     "uglify-js": "^2.6.1"
-  },
-  "scripts": {
-    "scss": "sass --style compressed --sourcemap=none assets/_scss/main.scss assets/css/main.css",
-    "uglify": "uglifyjs assets/js/vendor/jquery/jquery-1.12.4.min.js assets/js/plugins/jquery.fitvids.js assets/js/plugins/jquery.greedy-navigation.js assets/js/plugins/jquery.magnific-popup.js assets/js/plugins/jquery.smooth-scroll.min.js assets/js/plugins/stickyfill.min.js assets/js/_main.js -c -m -o assets/js/main.min.js",
-    "watch:css": "onchange \"assets/_scss/**/*.scss\" -- npm run build:css",
-    "watch:js": "onchange \"assets/js/**/*.js\" -e \"assets/js/main.min.js\" -- npm run build:js",
-    "watch:all": "npm-run-all --parallel watch:css watch:js",
-    "build:css": "npm run scss",
-    "build:js": "npm run uglify",
-    "build:all": "npm run build:css && npm run build:js"
   }
 }

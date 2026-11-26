@@ -22,14 +22,6 @@ $monospace                  : ui-monospace, "SF Mono", SFMono-Regular, Menlo, Mo
 
 /* sans serif typefaces */
 $sans-serif-narrow          : $sans-serif;
-$helvetica                  : Helvetica, "Helvetica Neue", Arial, sans-serif;
-
-/* serif typefaces */
-$georgia                    : Georgia, serif;
-$times                      : Times, serif;
-$bodoni                     : "Bodoni MT", serif;
-$calisto                    : "Calisto MT", serif;
-$garamond                   : Garamond, serif;
 
 $global-font-family         : $sans-serif;
 $header-font-family         : $sans-serif;
@@ -46,7 +38,6 @@ $type-size-4                : 1.15em;   // ~20px
 $type-size-5                : 1em;      // ~17px
 $type-size-6                : 0.8em;    // ~14px
 $type-size-7                : 0.72em;   // ~12px
-$type-size-8                : 0.65em;   // ~11px
 
 /* weights -- Inter is variable, so these are exact rather than bold/normal */
 $weight-normal              : 400;
@@ -70,25 +61,10 @@ $tracking-wide              : 0.06em;
    be passed to mix(), darken(), rgba() and friends.
    ========================================================================== */
 
-/* palette -- https://huemint.com/website-2/#palette=242324-dbdcd9-d6763c-63c6ae */
-$palette-ink                : #242324;
-$palette-paper              : #dbdcd9;
-$palette-orange             : #d6763c;
-$palette-teal               : #63c6ae;
-
-/* static neutral ramp, derived from the palette (compile-time mixing only) */
-$gray                       : mix($palette-ink, $palette-paper, 50%);
-$dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : mix(#fff, $gray, 50%);
-$lighter-gray               : mix(#fff, $gray, 90%);
-
 /* grounds */
 $background-color           : var(--color-bg);
-$body-color                 : var(--color-bg);
 $surface-color              : var(--color-surface);
 $surface-alt-color          : var(--color-surface-alt);
-$surface-hover-color        : var(--color-surface-hover);
 $code-background-color      : var(--color-code-bg);
 $scrim-color                : var(--color-scrim);
 
@@ -110,35 +86,6 @@ $primary-color              : var(--color-primary);
 $primary-color-hover        : var(--color-primary-hover);
 $on-primary-color           : var(--color-on-primary);
 $focus-color                : var(--color-focus);
-
-/* fixed status colors (notices, form validation -- not theme-dependent) */
-$success-color              : #3f8f78;
-$warning-color              : #c87a2a;
-$danger-color               : #c0392b;
-$info-color                 : #2f7d8f;
-
-/* brands */
-$behance-color              : #1769FF;
-$dribbble-color             : #ea4c89;
-$facebook-color             : #3b5998;
-$flickr-color               : #ff0084;
-$foursquare-color           : #0072b1;
-$github-color               : #171516;
-$google-plus-color          : #dd4b39;
-$instagram-color            : #517fa4;
-$lastfm-color               : #d51007;
-$linkedin-color             : #007bb6;
-$pinterest-color            : #cb2027;
-$rss-color                  : #fa9b39;
-$soundcloud-color           : #ff3300;
-$stackoverflow-color        : #fe7a15;
-$tumblr-color               : #32506d;
-$twitter-color              : #55acee;
-$vimeo-color                : #1ab7ea;
-$vine-color                 : #00bf8f;
-$youtube-color              : #bb0000;
-$xing-color                 : #006567;
-
 
 /* links */
 $link-color                 : var(--color-link);
@@ -162,7 +109,6 @@ $x-large                    : 1800px;
 
 $small                      : 600px !default;
 $medium                     : 768px !default;
-$medium-wide                : 900px !default;
 $large                      : 925px !default;
 $x-large                    : 1280px !default;
 
@@ -201,7 +147,6 @@ $border-radius-lg           : 10px;
 $border-radius-pill         : 999px;
 $box-shadow                 : var(--shadow-sm);
 $box-shadow-lifted          : var(--shadow-md);
-$box-shadow-raised          : var(--shadow-lg);
 $navicon-width              : 22px;
 $navicon-height             : 2px;
 $navicon-gap                : 6px;

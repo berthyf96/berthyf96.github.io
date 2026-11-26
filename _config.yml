@@ -14,20 +14,8 @@ description              : "Postdoctoral Fellow @ MIT"
 url                      : https://www.berthyfeng.com # the base hostname & protocol for your site
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "berthyf96.github.io"
-breadcrumbs              : false # true, false (default)
 atom_feed:
   path                   : # blank (default) uses feed.xml
-
-
-# SEO Related
-google_site_verification :
-og_image                 : # Open Graph/Twitter default site image
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
 
 
 # Site Author
@@ -53,7 +41,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
-  - assets/js/_main.js
   - assets/js/plugins
   - assets/js/vendor
   - node_modules
