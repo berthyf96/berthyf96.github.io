@@ -14,7 +14,8 @@
     @include prefix(0.5 of 12);
   }
 
-  a {
+  /* buttons are links too, so exempt them from the body-copy underline */
+  a:not(.btn) {
     text-decoration: underline;
 
     &:hover {

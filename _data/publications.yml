@@ -6,7 +6,7 @@ highlight:
     teaser: pidef_teaser.gif
     links:
       - "[Webpage](https://imaging.cms.caltech.edu/pidef/){: .btn .btn--inverse}"
-      - "[Paper](https://arxiv.org/abs/2602.08029){: .btn .btn--info}"
+      - "[Paper](https://arxiv.org/abs/2602.08029){: .btn .btn--inverse}"
       - "[Code](https://github.com/berthyf96/pidef){: .btn .btn--inverse}"
   - title: "Visual Surface Wave Elastography: Revealing Subsurface Physical Properties via Visible Surface Waves"
     authors: "Alexander C. Ogren\\*, **Berthy T. Feng**\\*, Jihoon Ahn, Katherine L. Bouman, Chiara Daraio"
@@ -14,7 +14,7 @@ highlight:
     teaser: vswe_teaser.png
     links:
       - "[Webpage](https://imaging.cms.caltech.edu/vswe/){: .btn .btn--inverse}"
-      - "[Paper](https://www.arxiv.org/abs/2507.09207){: .btn .btn--info}"
+      - "[Paper](https://www.arxiv.org/abs/2507.09207){: .btn .btn--inverse}"
       - "[Code](https://github.com/aco8ogren/vswe-iccv-2025){: .btn .btn--inverse}"
   - title: "Neural Approximate Mirror Maps for Constrained Diffusion Models"
     authors: "**Berthy T. Feng**, Ricardo Baptista, Katherine L. Bouman"
@@ -22,7 +22,7 @@ highlight:
     teaser: namm_teaser.png
     links:
       - "[Webpage](https://imaging.cms.caltech.edu/namm/){: .btn .btn--inverse}"
-      - "[Paper](https://openreview.net/forum?id=vgZDcUetWS){: .btn .btn--info}"
+      - "[Paper](https://openreview.net/forum?id=vgZDcUetWS){: .btn .btn--inverse}"
       - "[Code](https://github.com/berthyf96/namm){: .btn .btn--inverse}"
   - title: "Event-horizon-scale Imaging of M87* under Different Assumptions via Deep Generative Image Priors"
     authors: "**Berthy T. Feng**, Katherine L. Bouman, William T. Freeman"
@@ -30,14 +30,14 @@ highlight:
     teaser: m87_score_prior_teaser.png
     links:
       - "[Webpage](http://imaging.cms.caltech.edu/m87_score_prior/){: .btn .btn--inverse}"
-      - "[Paper](https://iopscience.iop.org/article/10.3847/1538-4357/ad737f){: .btn .btn--info}"
+      - "[Paper](https://iopscience.iop.org/article/10.3847/1538-4357/ad737f){: .btn .btn--inverse}"
   - title: "Variational Bayesian Imaging with an Efficient Surrogate Score-based Prior"
     authors: "**Berthy T. Feng**, Katherine L. Bouman"
     venue: "*Transactions on Machine Learning Research (TMLR)*, 2024" 
     teaser: surrogate_prior_teaser.png
     links:
       - "[Webpage](http://imaging.cms.caltech.edu/score_prior/){: .btn .btn--inverse}"
-      - "[Paper](https://openreview.net/forum?id=db2pFKVcm1){: .btn .btn--info}"
+      - "[Paper](https://openreview.net/forum?id=db2pFKVcm1){: .btn .btn--inverse}"
       - "[Code](https://github.com/berthyf96/score_prior){: .btn .btn--inverse}"
   - title: "Score-Based Diffusion Models as Principled Priors for Inverse Imaging"
     authors: "**Berthy T. Feng**, Jamie Smith, Michael Rubinstein, Huiwen Chang, Katherine L. Bouman, William T. Freeman"
@@ -45,7 +45,7 @@ highlight:
     teaser: score_prior_teaser.png
     links:
       - "[Webpage](http://imaging.cms.caltech.edu/score_prior/){: .btn .btn--inverse}"
-      - "[Paper](https://arxiv.org/abs/2304.11751){: .btn .btn--info}"
+      - "[Paper](https://arxiv.org/abs/2304.11751){: .btn .btn--inverse}"
       - "[Code](https://github.com/berthyf96/score_prior){: .btn .btn--inverse}"
   - title: "Visual Vibration Tomography: Estimating Interior Material Properties from Monocular Video"
     authors: "**Berthy T. Feng**, Alexander C. Ogren, Chiara Daraio, Katherine L. Bouman"
@@ -54,7 +54,7 @@ highlight:
     teaser: vvt_teaser.png
     links:
       - "[Webpage](http://imaging.cms.caltech.edu/vvt/){: .btn .btn--inverse}"
-      - "[Paper](https://arxiv.org/abs/2104.02735){: .btn .btn--info}"
+      - "[Paper](https://arxiv.org/abs/2104.02735){: .btn .btn--inverse}"
       - "[Code](https://github.com/berthyf96/visvib-tomography){: .btn .btn--inverse}"
 
 other:
@@ -66,34 +66,34 @@ other:
     venue: "*ICLR*, 2025"
     notes: "**Spotlight** (top 5.1% of submitted papers)"
     links:
-      - "[Paper](https://openreview.net/forum?id=U3PBITXNG6){: .btn .btn--info}"
+      - "[Paper](https://openreview.net/forum?id=U3PBITXNG6){: .btn .btn--inverse}"
   - title: "Provable Probabilistic Imaging Using Score-Based Generative Priors"
     authors: "Yu Sun, Zihui Wu, Yifan Chen, **Berthy T. Feng**, Katherine L. Bouman"
     venue: "*IEEE Transactions on Computational Imaging (TCI)*, 2024"
     links:
-      - "[Paper](https://ieeexplore.ieee.org/abstract/document/10645293){: .btn .btn--info}"
+      - "[Paper](https://ieeexplore.ieee.org/abstract/document/10645293){: .btn .btn--inverse}"
   - title: "Score-based Diffusion Models for Photoacoustic Tomography Image Reconstruction"
     authors: "Sreemanti Dey, Snigdha Saha, **Berthy T. Feng**, Manxiu Cui, Laure Delisle, Oscar Leong, Lihong V. Wang, Katherine L. Bouman"
     venue: "*ICASSP*, 2024"
     links:
-      - "[Paper](https://ieeexplore.ieee.org/abstract/document/10447579){: .btn .btn--info}"
+      - "[Paper](https://ieeexplore.ieee.org/abstract/document/10447579){: .btn .btn--inverse}"
   - title: "Gaussian process regression as a surrogate model for the computation of dispersion relations"
     authors: "Alexander C. Ogren, **Berthy T. Feng**, Katherine L. Bouman, Chiara Daraio"
     venue: "*Computer Methods in Applied Mechanics and Engineering (CMAME)*, 2024"
     links:
-      - "[Paper](https://www.sciencedirect.com/science/article/abs/pii/S0045782523007843){: .btn .btn--info}"
+      - "[Paper](https://www.sciencedirect.com/science/article/abs/pii/S0045782523007843){: .btn .btn--inverse}"
   - title: "Towards Unique and Informative Captioning of Images"
     authors: "Zeyu Wang, **Berthy T. Feng**, Karthik Narasimhan, Olga Russakovsky"
     venue: "*ECCV*, 2020"
     teaser: eccv20_captioning_teaser.png
     links:
-      - "[Paper](http://www.ecva.net/papers/eccv_2020/papers_ECCV/html/350_ECCV_2020_paper.php){: .btn .btn--info}"
+      - "[Paper](http://www.ecva.net/papers/eccv_2020/papers_ECCV/html/350_ECCV_2020_paper.php){: .btn .btn--inverse}"
       - "[Code](https://github.com/princetonvisualai/SPICE-U){: .btn .btn--inverse}"
   - title: "Learning Bandwidth Expansion Using Perceptually-Motivated Loss"
     authors: "**Berthy T. Feng**, Zeyu Jin, Jiaqi Su, Adam Finkelstein"
     venue: "*ICASSP*, 2019"
     teaser: icassp19_teaser.png
     links:
-      - "[Paper](https://pixl.cs.princeton.edu/pubs/Feng_2019_LBE/Feng_2019_bwe.pdf){: .btn .btn--info}"
+      - "[Paper](https://pixl.cs.princeton.edu/pubs/Feng_2019_LBE/Feng_2019_bwe.pdf){: .btn .btn--inverse}"
       - "[Code](https://github.com/berthyf96/bwe_fftnet){: .btn .btn--inverse}"
  

@@ -10,16 +10,21 @@
   /* default button */
   display: inline-block;
   margin-bottom: 0.25em;
-  padding: 0.5em 1em;
+  padding: 0.4em 0.95em;
   color: $on-primary-color !important;
   font-family: $sans-serif;
   font-size: $type-size-6;
-  font-weight: bold;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
   text-align: center;
   text-decoration: none;
+  vertical-align: middle;
   background-color: $primary-color;
-  border: 0 !important;
-  border-radius: $border-radius;
+  /* transparent rather than none, so filled and outlined buttons measure
+     the same and sit on one line */
+  border: 1px solid transparent !important;
+  border-radius: 3px;
   cursor: pointer;
 
   &:hover {
@@ -49,12 +54,12 @@
 
   &--inverse {
     color: $text-color !important;
-    border: 1px solid $border-color-strong !important; /* override*/
-    background-color: $surface-color;
+    border-color: $border-color-strong !important; /* override*/
+    background-color: transparent;
 
     &:hover {
       color: $on-primary-color !important;
-      border-color: $primary-color;
+      border-color: $primary-color !important;
       background-color: $primary-color;
     }
   }
@@ -68,12 +73,11 @@
 
   /* information */
 
-  /* the emphasized link in a publication entry -- primary accent */
   &--info {
-    background-color: $primary-color;
+    background-color: $info-color;
 
     &:hover {
-      background-color: $primary-color-hover;
+      background-color: mix(#000, $info-color, 20%);
     }
   }
 

@@ -182,105 +182,17 @@ body:hover .visually-hidden button {
 /* social icons*/
 
 .social-icons {
-  .fa {
+  /* These sit in a plain link list, not a colored badge row, so they follow
+     the text color in both themes. The theme pinned a fixed brand color per
+     network, which left github's #171516 at 1.2:1 on the dark ground while
+     the unbranded icons inverted correctly. */
+  .fa,
+  .fas,
+  .far,
+  .fal,
+  .fab,
+  .ai {
     color: $text-color;
-  }
-
-  .fa-behance,
-  .fa-behance-square {
-    color: $behance-color;
-  }
-
-  .fa-dribbble {
-    color: $dribbble-color;
-  }
-
-  .fa-facebook,
-  .fa-facebook-square {
-    color: $facebook-color;
-  }
-
-  .fa-flickr {
-    color: $flickr-color;
-  }
-
-  .fa-foursquare {
-    color: $foursquare-color;
-  }
-
-  .fa-github,
-  .fa-github-alt,
-  .fa-github-square {
-    color: $github-color;
-  }
-
-  .fa-google-plus,
-  .fa-google-plus-square {
-    color: $google-plus-color;
-  }
-
-  .fa-instagram {
-    color: $instagram-color;
-  }
-
-  .fa-lastfm,
-  .fa-lastfm-square {
-    color: $lastfm-color;
-  }
-
-  .fa-linkedin,
-  .fa-linkedin-square {
-    color: $linkedin-color;
-  }
-
-  .fa-pinterest,
-  .fa-pinterest-p,
-  .fa-pinterest-square {
-    color: $pinterest-color;
-  }
-
-  .fa-rss,
-  .fa-rss-square {
-    color: $rss-color;
-  }
-
-  .fa-soundcloud {
-    color: $soundcloud-color;
-  }
-
-  .fa-stack-exchange,
-  .fa-stack-overflow {
-    color: $stackoverflow-color;
-  }
-
-  .fa-tumblr,
-  .fa-tumblr-square {
-    color: $tumblr-color;
-  }
-
-  .fa-twitter,
-  .fa-twitter-square {
-    color: $twitter-color;
-  }
-
-  .fa-vimeo,
-  .fa-vimeo-square {
-    color: $vimeo-color;
-  }
-
-  .fa-vine {
-    color: $vine-color;
-  }
-
-  .fa-youtube,
-  .fa-youtube-square,
-  .fa-youtube-play {
-    color: $youtube-color;
-  }
-
-  .fa-xing,
-  .fa-xing-square {
-    color: $xing-color;
   }
 }
 
